@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TerraQuants - Ayoub Douider</title>
+    <title>ESN Wereldrecord Sled Push - Ayoub Douider</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -100,11 +100,11 @@
             height: 18px;
             border-radius: 2px;
             display: inline-block;
+            color: var(--accent);
         }
 
             background: var(--primary);
             color: white;
-            color: var(--accent);
         }
 
         .case-hero {
@@ -123,7 +123,7 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #ff6b6b;
+            color: var(--accent);
             font-weight: 600;
             margin-bottom: 1rem;
         }
@@ -149,7 +149,7 @@
             object-fit: contain;
             display: block;
             background: white;
-            padding: 3rem;
+            padding: 2rem;
         }
 
         .case-content {
@@ -248,7 +248,7 @@
         }
 
         .highlight-box {
-            background: #fff5f5;
+            background: #fff9f0;
             border-left: 4px solid var(--accent);
             padding: 2rem;
             margin: 2rem 0;
@@ -260,40 +260,7 @@
             margin-bottom: 1rem;
         }
 
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .tool-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .tool-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .tool-card h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .tool-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        .website-link {
+        .news-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -307,23 +274,9 @@
             margin: 1rem 0;
         }
 
-        .website-link:hover {
+        .news-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44,95,124,0.3);
-        }
-
-        .process-flow {
-            background: white;
-            border: 2px solid var(--accent);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .process-flow h4 {
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(255,107,0,0.3);
         }
 
         .cta-section {
@@ -359,7 +312,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(44,95,124,0.3);
+            box-shadow: 0 10px 30px rgba(255,107,0,0.3);
         }
 
         footer {
@@ -381,10 +334,9 @@
 
             .featured-image {
                 max-height: 250px;
-                padding: 2rem;
             }
 
-            .info-grid, .tools-grid {
+            .info-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -397,190 +349,143 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="index-en.html" class="back-link">
+            <a href="index.html" class="back-link">
                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                 </svg>
-                Back to portfolio
+                Terug naar portfolio
             </a>
             <div class="language-switcher">
-                <a href="case-terraquants.html" class="lang-btn">🇳🇱 NL</a>
-                <a href="case-terraquants-en.html" class="lang-btn active">🇬🇧 EN</a>
+                <a href="case-esn.html" class="lang-btn active">🇳🇱 NL</a>
+                <a href="case-esn-en.html" class="lang-btn">🇬🇧 EN</a>
             </div>
-            </a>
         </div>
     </nav>
 
     <section class="case-hero">
         <div class="container">
-            <div class="case-category">DESIGNING AND IMPROVING BUSINESS PROCESSES</div>
-            <h1>TerraQuants – Collaboration Flow for a Hybrid Team</h1>
-            <p class="subtitle">Process design for an international platform team</p>
+            <div class="case-category">Eventmanagement</div>
+            <h1>ESN - Wereldrecord Sled Push</h1>
+            <p class="subtitle">24-uurs wereldrecord event op Rotterdam Centraal</p>
         </div>
     </section>
 
-    <img src="logo-terraquants.png" alt="TerraQuants - Strategic Market Intelligence" class="featured-image">
+    <img src="logo-esn.png" alt="ESN - Elite Sports Nutrition" class="featured-image">
 
     <div class="case-content">
         <div class="info-grid">
             <div class="info-item">
-                <h4>Role</h4>
-                <p>Process Design / Project Coordination</p>
+                <h4>Rol</h4>
+                <p>Eventmanager (on-site)</p>
             </div>
             <div class="info-item">
-                <h4>Tools</h4>
-                <p>Slack, Notion</p>
+                <h4>Datum & Locatie</h4>
+                <p>Okt 2025 - Rotterdam CS</p>
+            </div>
+            <div class="info-item">
+                <h4>Mijn Shift</h4>
+                <p>Eerste 12 uur</p>
             </div>
             <div class="info-item">
                 <h4>Team</h4>
-                <p>Hybrid, international</p>
-            </div>
-            <div class="info-item">
-                <h4>Locations</h4>
-                <p>NL, PK, IN, GR</p>
+                <p>15 crew (mijn shift)</p>
             </div>
         </div>
 
-        <a href="https://terraquants.com" target="_blank" class="website-link">
+        <a href="https://www.ad.nl/rotterdam/wereldrecord-sled-push-na-geweldige-inspanning-ruimschoots-verbroken-op-rotterdam-centraal~a3ec8f42/" target="_blank" class="news-link">
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
             </svg>
-            Visit the TerraQuants website
+            Lees het nieuwsartikel in het AD
         </a>
 
         <div class="content-section">
             <h2>Context</h2>
             <p>
-                TerraQuants is a platform initiative led by an experienced investor. The goal: bring together 
-                data from multiple sources to support better decision-making and make it accessible through a 
-                platform + community, together with external specialists (dev/data/design).
-            </p>
-            <p>
-                The team consisted of web developers, data analysts, and designers working in a hybrid setup on 
-                a project basis, spread across multiple countries.
+                ESN organiseerde een 24-uurs "sled push" wereldrecordevent op Rotterdam Centraal, met publiek, 
+                forenzen en een doorlopende livestream. Het event moest niet alleen inhoudelijk kloppen voor de 
+                recordorganisatie, maar ook veilig en netjes verlopen in een drukke stationsomgeving.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>Challenge</h2>
+            <h2>Uitdaging</h2>
             <p>
-                The team consisted of web developers, data analysts and designers die hybride en op projectbasis 
-                werkten. The client had limited time alongside his regular work, maar wilde wel 
-                grip op voortgang, dependencies and decision-making.
+                Een recordevent in een publieke high-traffic locatie betekent extra complexiteit: je hebt continue 
+                doorstroom van deelnemers én publiek, terwijl je ook rekening houdt met locatieregels (NS), 
+                veiligheid, crowd control en strakke timing.
             </p>
             <p>
-                Because the team was distributed across <strong>meerdere landen (Pakistan, India, Griekenland en Nederland)</strong>, 
-                alignment, handovers, and decisions needed to be tightly organized.
-            </p>
-            <p>
-                Without clear structure, questions and updates threatened to cause noise, waardoor snelheid 
-                en focus onder druk kwamen te staan.
+                Tegelijk moet registratie betrouwbaar zijn en moet de beleving goed blijven voor publiek en livestream.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>Assignment</h2>
+            <h2>Mijn Verantwoordelijkheid</h2>
             <p>
-                Set up a collaboration and communication flow with which the team could continue independently, 
-                while progress and decisions remained clear voor de opdrachtgever.
+                Ik was verantwoordelijk voor een <strong>team van 15 crewleden gedurende de eerste 12 uur</strong> 
+                en stuurde de volledige uitvoering op de vloer aan:
             </p>
-        </div>
-
-        <div class="content-section">
-            <h2>Approach / What I set up</h2>
-            
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <h4>Slack</h4>
-                    <p>Communication & alignment</p>
-                </div>
-                <div class="tool-card">
-                    <h4>Notion</h4>
-                    <p>Documentation & progress tracking</p>
-                </div>
-            </div>
-
-            <h3>1. Slack structure</h3>
             <ul>
-                <li>Project/discipline channels for collaboration</li>
-                <li>General channels for updates and alignment</li>
-                <li>Fixed moments for team calls and short check-ins</li>
+                <li>deelnemers verwelkomen, begeleiden en briefen (regels + planning)</li>
+                <li>warming-up faciliteren en deelnemers gereed maken</li>
+                <li>naleving van regels bewaken (recordregels + locatie/NS-afspraken)</li>
+                <li>safety en blessure-afhandeling coördineren samen met EHBO</li>
+                <li>backstage/toegang bewaken (alleen deelnemers bij warming-up/spullen)</li>
+                <li>publieksbeleving ondersteunen via afstemming met host</li>
+                <li>live registratie van pushes volgens eisen van de recordorganisatie (met steekproefcontroles)</li>
+                <li>afstemming met social media team en de crew van de 24/7 livestream</li>
             </ul>
-
-            <h3>2. Notion as the central hub</h3>
-            <ul>
-                <li>All documentation in one place (agreements, decisions, plans)</li>
-                <li>Overview of tasks/progress per discipline</li>
-                <li>Transparency in status and next steps</li>
-            </ul>
-
-            <h3>3. Workflows for questions and alignment</h3>
-            <ul>
-                <li>Clear route: where to ask which question, and to whom</li>
-                <li>Reduced noise and duplicate work</li>
-            </ul>
-
-            <h3>4. Decision pyramid</h3>
-            <div class="process-flow">
-                <h4>Decision levels:</h4>
-                <ul>
-                    <li><strong>Team:</strong> What can the team decide themselves? (operational choices, technical implementation)</li>
-                    <li><strong>Project Leader:</strong> When does it escalate to me? (scope, priorities, conflicts)</li>
-                    <li><strong>Client:</strong> When must the client decide? (strategy, budget, direction)</li>
-                </ul>
-            </div>
-            <p>
-                This enabled faster execution without unnecessary escalation.
-            </p>
         </div>
 
         <div class="highlight-box">
-            <h3>International collaboration</h3>
-            <p>
-                With team members in Pakistan, India, Greece and the Netherlands it was essential to:
-            </p>
+            <h3>Planning & uitvoering (mijn shift)</h3>
             <ul>
-                <li>Set up asynchronous communication well (not everyone is online at the same time)</li>
-                <li>Have clear documentation where everyone can work independently</li>
-                <li>Plan fixed check-in moments that work for all time zones</li>
-                <li>Bridge cultural differences in work style with explicit agreements</li>
+                <li><strong>36 deelnemers</strong> verdeeld over groepen van 6</li>
+                <li>Elke groep duwde <strong>2 uur</strong>, waardoor timing, wisselmomenten en pacing strak moesten verlopen</li>
+                <li>Continue bezetting op de drukste punten om opstoppingen te voorkomen (warming-up, start/finish, backstage)</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Aanpak / Hoe ik het organiseerde</h2>
+            <ul>
+                <li><strong>Duidelijke rolverdeling binnen crew</strong> (participant flow, backstage, registratie, safety)</li>
+                <li><strong>Vaste communicatie- en escalatielijnen</strong> om snel te schakelen bij piekmomenten</li>
+                <li><strong>Checkpoints per groep:</strong> briefing → warming-up → uitvoering → monitoring → wissel</li>
+                <li><strong>Continue afstemming met host/livestream</strong> zodat het event voor publiek en kijkers strak bleef</li>
             </ul>
         </div>
 
         <div class="results-box">
-            <h3>Result / Delivery</h3>
+            <h3>Resultaat / Oplevering</h3>
             <ul>
-                <li>The team could work in parallel with clear alignment and fewer misunderstandings</li>
-                <li>Progress became visible and consistent through Notion + structured Slack updates</li>
-                <li>The client retained control with minimal time investment</li>
-                <li>Faster decision-making thanks to clear mandates (decision pyramid)</li>
-                <li>Less noise and duplicate work through structured communication</li>
+                <li>Soepele uitvoering van de eerste 12 uur binnen een 24-uurs live recordsetting</li>
+                <li>Veilig en gecontroleerd verloop in een drukke stationsomgeving, conform locatie/NS-afspraken</li>
+                <li>Betrouwbare registratie volgens recordeisen, met succesvolle controles</li>
+                <li><strong>Wereldrecord behaald! 🏆</strong></li>
             </ul>
         </div>
 
         <div class="content-section">
-            <h2>Skills</h2>
+            <h2>Vaardigheden</h2>
             <p>
-                Process design • Stakeholder management • Project structure • Communication & cadence • 
-                Hybrid collaboration • International teamwork • Tool implementation
+                Event operations • Teamlead (15) • Run-of-show • Participant management • Crowd/guest flow • 
+                Safety & incident handling (met EHBO) • Access control • Live tracking/registratie • 
+                Stakeholder coordination • Communication under pressure
             </p>
         </div>
 
         <div class="content-section">
 
     <section class="cta-section">
-        <h2>Interested in Collaboration?</h2>
-        <p>I help organizations with process optimization and project coordination</p>
-        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Get in touch</a>
+        <h2>Geïnteresseerd in samenwerking?</h2>
+        <p>Ik help organisaties met eventmanagement en procesoptimalisatie</p>
+        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Neem contact op</a>
     </section>
 
     <footer>
-        <p>© 2025 Ayoub Douider | <a href="index-en.html">Back to portfolio</a></p>
-            </a>
-            <div class="language-switcher">
-                <a href="case-terraquants.html" class="lang-btn">🇳🇱 NL</a>
-                <a href="case-terraquants-en.html" class="lang-btn active">🇬🇧 EN</a>
-            </div>
+        <p>© 2025 Ayoub Douider | <a href="index.html">Terug naar portfolio</a></p>
     </footer>
 </body>
 </html>

@@ -58,7 +58,6 @@
         }
 
         .back-link:hover {
-            color: var(--accent);
         }
 
         /* Language Switcher */
@@ -68,10 +67,10 @@
         }
 
         .lang-btn {
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--primary);
-            background: transparent;
-            color: var(--primary);
+            padding: 0.5rem 0.75rem;
+            border: 2px solid #ddd;
+            background: white;
+            color: #666;
             font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
@@ -79,15 +78,31 @@
             transition: all 0.3s ease;
             font-family: 'DM Sans', sans-serif;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
         }
 
         .lang-btn:hover {
-            background: var(--primary);
-            color: white;
+            border-color: var(--accent);
+            background: #fff5f5;
+            color: var(--accent);
         }
 
         .lang-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .flag-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 2px;
+            display: inline-block;
+            color: var(--accent);
+        }
+
             background: var(--primary);
             color: white;
         }
@@ -352,8 +367,8 @@
                 Terug naar portfolio
             </a>
             <div class="language-switcher">
-                <a href="case-nah.html" class="lang-btn active">NL</a>
-                <a href="case-nah-en.html" class="lang-btn">EN</a>
+                <a href="case-nah.html" class="lang-btn active">🇳🇱 NL</a>
+                <a href="case-nah-en.html" class="lang-btn">🇬🇧 EN</a>
             </div>
             </a>
         </div>
@@ -499,8 +514,8 @@
         <p>© 2025 Ayoub Douider | <a href="index.html">Terug naar portfolio</a></p>
             </a>
             <div class="language-switcher">
-                <a href="case-nah.html" class="lang-btn active">NL</a>
-                <a href="case-nah-en.html" class="lang-btn">EN</a>
+                <a href="case-nah.html" class="lang-btn active">🇳🇱 NL</a>
+                <a href="case-nah-en.html" class="lang-btn">🇬🇧 EN</a>
             </div>
     </footer>
 </body>
