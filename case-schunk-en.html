@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schunk Xycarb Technology - Ayoub Douider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #ff6b6b;
+            --text: #2d2d2d;
+            --text-light: #666;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 0.75rem;
+            border: 2px solid #ddd;
+            background: white;
+            color: #666;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--accent);
+            background: #fff5f5;
+            color: var(--accent);
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .case-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .case-hero .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .case-category {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .case-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+            background: white;
+            padding: 3rem;
+        }
+
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-section ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: 12px;
+        }
+
+        .info-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .results-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .results-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .results-box p, .results-box ul li {
+            color: white;
+            opacity: 0.95;
+        }
+
+        .highlight-box {
+            background: #fff5f5;
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--accent);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-description {
+            color: var(--text);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tool-badge {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .tool-badge:hover {
+            border-color: var(--accent);
+            background: #fff5f5;
+        }
+
+        .impact-box {
+            background: #2d2d2d;
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .impact-box h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(123,164,40,0.3);
+        }
+
+        footer {
+            background: #0f0f0f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .case-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .featured-image {
+                max-height: 250px;
+                padding: 2rem;
+            }
+
+            .info-grid, .stats-grid, .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="back-link">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Back to portfolio
+            </a>
+            <div class="language-switcher">
+                <a href="case-schunk.html" class="lang-btn">🇳🇱 NL</a>
+                <a href="case-schunk-en.html" class="lang-btn active">🇬🇧 EN</a>
+            </div>
+            </a>
+        </div>
+    </nav>
+
+    <section class="case-hero">
+        <div class="container">
+            <div class="case-category">DESIGNING AND IMPROVING BUSINESS PROCESSES</div>
+            <h1>Schunk Xycarb Technology – Operations Performance & Planning</h1>
+            <p class="subtitle">Translating machine data and SAP into actionable insights and improvements</p>
+        </div>
+    </section>
+
+    <img src="logo-schunk.png" alt="Schunk Xycarb Technology" class="featured-image">
+
+    <div class="case-content">
+        <div class="info-grid">
+            <div class="info-item">
+                <h4>Role</h4>
+                <p>Process Improvement / Data Analysis</p>
+            </div>
+            <div class="info-item">
+                <h4>Duration</h4>
+                <p>6 months</p>
+            </div>
+            <div class="info-item">
+                <h4>Industry</h4>
+                <p>Manufacturing</p>
+            </div>
+        </div>
+
+        <div class="tools-grid">
+            <div class="tool-badge">Power BI</div>
+            <div class="tool-badge">Excel</div>
+            <div class="tool-badge">SAP</div>
+            <div class="tool-badge">Value Stream Mapping</div>
+        </div>
+
+        <div class="content-section">
+            <h2>Context</h2>
+            <p>
+                At Schunk Xycarb Technology (SXT) heb ik gedurende 6 months gewerkt aan het versnellen en 
+                verbeteren van de operatie by translating machine and planning data om te zetten naar stuurinformatie 
+                en concrete verbeteringen.
+            </p>
+            <p>
+                SXT is a manufacturing company where machine efficiency, planning and customer communication cruciaal 
+                zijn voor het succes van de operatie.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Challenge</h2>
+            <p>
+                There were three major challenges:
+            </p>
+            <ul>
+                <li><strong>Limited transparency:</strong> How efficiently machines ran daily and where bottlenecks occurred was unclear</li>
+                <li><strong>Staff Planning:</strong> Staff planning did not align well with available workplaces/machines, leading to moments of over- or understaffing</li>
+                <li><strong>Unreliable SAP processing times:</strong> Processing times in SAP were often incorrect, making planning and customer communication unnecessarily difficult</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Assignment</h2>
+            <p>
+                Create insight based on data into machine performance and bottlenecks, én dit vertalen naar 
+                verbeteringen that make planning more reliable and can be monitored structurally over time.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Approach / What I Did</h2>
+            
+            <h3>1. Value Stream Mapping</h3>
+            <p>
+                Set up Value Stream Map (VSM) om flow, wachttijden en knelpunten in het proces zichtbaar 
+                te maken. This provided an initial overview of where time was lost.
+            </p>
+
+            <h3>2. Collect and Clean Data</h3>
+            <p>
+                Collected and cleaned machine and process data (SAP/Excel) (SAP/Excel) en vertaald naar eenduidige 
+                definities/KPI's. Without this step, reliable analysis was impossible.
+            </p>
+
+            <h3>3. Power BI Dashboard</h3>
+            <p>
+                Developed Power BI dashboard dat <strong>dagelijks automatisch</strong> laat zien:
+            </p>
+            <ul>
+                <li>How efficiently machines have worked</li>
+                <li>Where bottlenecks were and how long they lasted</li>
+                <li>Trend development so improvements are continuously monitored</li>
+            </ul>
+
+            <h3>4. Capacity vs. staffing analysis</h3>
+            <p>
+                Capaciteit vs. bezetting geanalyseerd: vergelijking tussen beschikbare werkplekken/machines 
+                en personeelsplanning. This clearly showed where the mismatch was.
+            </p>
+
+            <h3>5. Improve SAP Processing Times</h3>
+            <p>
+                Developed new working method for SAP processing times zodat planning gebaseerd wordt op 
+                realistische tijden i.p.v. historische/onjuiste waarden.
+            </p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Methodology</h3>
+            <p>
+                The approach combined Lean Manufacturing principles (VSM, bottleneck analysis) with modern 
+                analytics tools (Power BI) and ERP optimization (SAP). This ensured improvements weren't just 
+                visible, but also structurally embedded and continuously monitored.
+            </p>
+        </div>
+
+        <div class="results-box">
+            <h3>Result / Delivery</h3>
+            <ul>
+                <li><strong>Automated Power BI dashboard</strong> with daily monitoring of machine efficiency and bottlenecks (continuous insight + improvement tracking)</li>
+                <li><strong>Workforce planning insight:</strong> demonstrated staffing often didn't match available workstations/machines—only ~16% of the time the staffing level was a good fit</li>
+                <li><strong>Improved SAP operation times:</strong> where times were previously accurate only ~3% of the time, the new approach provides a much more reliable basis for planning</li>
+                <li><strong>Practical impact:</strong> easier and better planning + clearer, more reliable customer communication about what will be ready when</li>
+            </ul>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">16%</div>
+                <div class="stat-label">RIGHT-SIZED STAFFING</div>
+                <div class="stat-description">Previously: unknown what percentage was correct</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3% → ✓</div>
+                <div class="stat-label">SAP TIMES</div>
+                <div class="stat-description">From ~3% accurate to a reliable planning basis</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">AUTOMATED</div>
+                <div class="stat-description">Dashboard updates daily without manual work</div>
+            </div>
+        </div>
+
+        <div class="impact-box">
+            <h4>Practical impact for the organization</h4>
+            <ul>
+                <li><strong>Planning:</strong> realistic time estimates improve schedule reliability</li>
+                <li><strong>Customer communication:</strong> clearer expectations on lead times and delivery dates</li>
+                <li><strong>Continuous improvement:</strong> dashboard makes bottlenecks immediately visible</li>
+                <li><strong>Capacity management:</strong> insight into over/understaffing supports better rostering</li>
+                <li><strong>Data-driven decisions:</strong> from "gut feel" to "knowing"</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Skills</h2>
+            <p>
+                Process analysis • Data analysis • Power BI dashboards • SAP/Excel • Bottleneck & capacity analysis • 
+                Implementation-driven improvement • Value Stream Mapping • Manufacturing operations
+            </p>
+        </div>
+
+        <div class="content-section">
+
+        <section class="cta-section">
+        <h2>Interested in Collaboration?</h2>
+        <p>I help organizations with event management and process optimization</p>
+        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Get in touch</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Ayoub Douider | <a href="index-en.html">Back to portfolio</a></p>
+    </footer>
+</body>
+</html>
