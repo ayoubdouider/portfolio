@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Stranger Things S5 - Ayoub Douider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #ff6b6b;
+            --text: #2d2d2d;
+            --text-light: #666;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .lang-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .case-hero {
+            background: linear-gradient(135deg, #000 0%, #221f1f 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .case-hero .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .case-category {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .case-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+            background: #000;
+            padding: 2rem 0;
+        }
+
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-section ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: 12px;
+        }
+
+        .info-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .results-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .results-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .results-box p, .results-box ul li {
+            color: white;
+            opacity: 0.95;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .other-projects {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-radius: 12px;
+        }
+
+        .other-projects h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .project-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .project-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-item p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .project-item a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-item a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
+        }
+
+        footer {
+            background: #0f0f0f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .disclaimer {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            color: #856404;
+        }
+
+        @media (max-width: 768px) {
+            .case-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .featured-image {
+                max-height: 250px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="back-link">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Back to portfolio
+            </a>
+            <div class="language-switcher">
+                <a href="case-netflix.html" class="lang-btn">NL</a>
+                <a href="case-netflix-en.html" class="lang-btn active">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="case-hero">
+        <div class="container">
+            <div class="case-category">EVENT MANAGEMENT</div>
+            <h1>Netflix – Stranger Things S5 Screening & Clubhouse</h1>
+            <p class="subtitle">On-site event management for an exclusive Netflix event in Amsterdam</p>
+        </div>
+    </section>
+
+    <img src="logo-netflix.png" alt="Netflix" class="featured-image">
+
+    <div class="case-content">
+        <div class="info-grid">
+            <div class="info-item">
+                <h4>Role</h4>
+                <p>On-site Event Manager</p>
+            </div>
+            <div class="info-item">
+                <h4>Date & Location</h4>
+                <p>Nov 2025 – Westergas, Amsterdam</p>
+            </div>
+            <div class="info-item">
+                <h4>Team</h4>
+                <p>~30 crew</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Context</h2>
+            <p>
+                For Netflix, I managed a Stranger Things S5 screening combined with a Clubhouse experience in 
+                Amsterdam. The event consisted of multiple components with strict time slots: arrival, hospitality, 
+                preview screening, and then guest flow into the Clubhouse activities.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Challenge</h2>
+            <p>
+                Operations had to run extremely tight due to limited time per group and high requirements for 
+                experience and security. Within <strong>30 minutes</strong>, <strong>250 guests</strong> had to:
+            </p>
+            <ul>
+                <li>enter</li>
+                <li>drop off coats (cloakroom)</li>
+                <li>receive food/drinks</li>
+                <li>be seated in the correct theatre on time for the preview</li>
+            </ul>
+            <p>
+                Afterwards, the same group had <strong>15 minutes</strong> to exit and move on to the next 
+                activities, while the venue was immediately <strong>reset</strong> for the next group. This ran 
+                across <strong>2 evenings × 2 groups</strong> (including influencers and VIP guests from 
+                partners/sponsors), with extra focus on brand experience and hospitality.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>My Responsibility</h2>
+            <p>
+                I was responsible for a <strong>team of approximately 30 people</strong> and led the full flow 
+                around hospitality and seating operations, including:
+            </p>
+            <ul>
+                <li>catering & distribution (food/drinks on time and controlled)</li>
+                <li>routing to the correct rooms/theatres</li>
+                <li>alignment with security to prevent leaks of the preview</li>
+                <li>coordination with tech/projection (film starts at the right moment)</li>
+                <li>cloakroom and front-of-house operations</li>
+                <li>reset between groups and crew reallocation</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Approach / How I organized it</h2>
+            <ul>
+                <li><strong>Designed the flow as a chain</strong> with fixed checkpoints (entry → cloakroom → hospitality → theatre → exit)</li>
+                <li><strong>Crew rotation plan:</strong> dynamically moved people to the busiest points (bottlenecks) at the right moments</li>
+                <li><strong>Clear role ownership:</strong> one point-of-contact per checkpoint + short escalation line</li>
+                <li><strong>Strict time control:</strong> cues/communication, actively directing guest flow, immediate reset after each group</li>
+                <li><strong>Extra attention for special groups</strong> (influencers/VIPs) without disrupting the overall flow</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Event Impression (video)</h2>
+            <p>The video below gives a short impression of the setting and guest experience.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/AjJ5UeOmljY" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="results-box">
+            <h3>Result / Delivery</h3>
+            <ul>
+                <li>Smooth execution of a high-pressure event with multiple time slots and high security and quality requirements</li>
+                <li><strong>250 guests per group</strong> moved through the full journey on time (arrival → screening → onward flow)</li>
+                <li>Fast resets between groups to keep the experience consistent across <strong>2 evenings × 2 groups</strong></li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Skills</h2>
+            <p>
+                Event operations • Run of show • Crew management (30+) • Guest flow & crowd control • 
+                Hospitality & catering coordination • Security awareness • Problem solving under pressure
+            </p>
+        </div>
+
+        <div class="content-section" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; color: #666;">
+            <strong>Disclaimer:</strong> Details about internal processes and security measures are limited due to confidentiality.
+        </div>
+
+        <div class="other-projects">
+            <h3>Other Netflix projects</h3>
+            <p>
+                In addition to my role as event manager for Stranger Things, I also supported Netflix on 
+                earlier fan experiences in the Netherlands.
+            </p>
+            
+            <div class="project-item">
+                <h4>Squid Game Maze – Amsterdam (Dec 2024)</h4>
+                <p>
+                    Support during on-site execution; shadowed experienced event managers and helped with 
+                    guest flow and crew support.
+                </p>
+                <a href="https://fhm.nl/entertainment/dit-was-het-gruwelijke-squid-game-maze-in-amsterdam" target="_blank">Read article →</a>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="netflix-squid-game-maze.jpg" alt="Squid Game Maze Amsterdam">
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>Squid Game activation – Rotterdam (Jun 2025)</h4>
+                <p>
+                    Support during a public activation; focused on on-floor execution, alignment during peak 
+                    moments, and operational support.
+                </p>
+                <a href="https://www.dutchcowboys.nl/entertainment/netflix-komt-met-squid-game-the-final-farewell-event-in-rotterdam" target="_blank">Read article →</a>
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="netflix-squid-game-rotterdam.jpg" alt="Squid Game Rotterdam">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Interested in Collaboration?</h2>
+        <p>I help organizations with event management and process optimization</p>
+        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Get in touch</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Ayoub Douider | <a href="index-en.html">Back to portfolio</a></p>
+    </footer>
+</body>
+</html>

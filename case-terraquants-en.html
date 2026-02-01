@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraQuants - Ayoub Douider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #ff6b6b;
+            --text: #2d2d2d;
+            --text-light: #666;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .lang-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            color: var(--accent);
+        }
+
+        .case-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .case-hero .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .case-category {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .case-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+            background: white;
+            padding: 3rem;
+        }
+
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-section ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: 12px;
+        }
+
+        .info-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .results-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .results-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .results-box p, .results-box ul li {
+            color: white;
+            opacity: 0.95;
+        }
+
+        .highlight-box {
+            background: #fff5f5;
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .tool-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .website-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 1rem 0;
+        }
+
+        .website-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44,95,124,0.3);
+        }
+
+        .process-flow {
+            background: white;
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .process-flow h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(44,95,124,0.3);
+        }
+
+        footer {
+            background: #0f0f0f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .case-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .featured-image {
+                max-height: 250px;
+                padding: 2rem;
+            }
+
+            .info-grid, .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="back-link">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Back to portfolio
+            </a>
+            <div class="language-switcher">
+                <a href="case-terraquants.html" class="lang-btn">NL</a>
+                <a href="case-terraquants-en.html" class="lang-btn active">EN</a>
+            </div>
+            </a>
+        </div>
+    </nav>
+
+    <section class="case-hero">
+        <div class="container">
+            <div class="case-category">DESIGNING AND IMPROVING BUSINESS PROCESSES</div>
+            <h1>TerraQuants – Collaboration Flow for a Hybrid Team</h1>
+            <p class="subtitle">Process design for an international platform team</p>
+        </div>
+    </section>
+
+    <img src="logo-terraquants.png" alt="TerraQuants - Strategic Market Intelligence" class="featured-image">
+
+    <div class="case-content">
+        <div class="info-grid">
+            <div class="info-item">
+                <h4>Role</h4>
+                <p>Process Design / Project Coordination</p>
+            </div>
+            <div class="info-item">
+                <h4>Tools</h4>
+                <p>Slack, Notion</p>
+            </div>
+            <div class="info-item">
+                <h4>Team</h4>
+                <p>Hybrid, international</p>
+            </div>
+            <div class="info-item">
+                <h4>Locations</h4>
+                <p>NL, PK, IN, GR</p>
+            </div>
+        </div>
+
+        <a href="https://terraquants.com" target="_blank" class="website-link">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+            </svg>
+            Visit the TerraQuants website
+        </a>
+
+        <div class="content-section">
+            <h2>Context</h2>
+            <p>
+                TerraQuants is a platform initiative led by an experienced investor. The goal: bring together 
+                data from multiple sources to support better decision-making and make it accessible through a 
+                platform + community, together with external specialists (dev/data/design).
+            </p>
+            <p>
+                The team consisted of web developers, data analysts, and designers working in a hybrid setup on 
+                a project basis, spread across multiple countries.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Challenge</h2>
+            <p>
+                The team consisted of web developers, data analysts and designers die hybride en op projectbasis 
+                werkten. The client had limited time alongside his regular work, maar wilde wel 
+                grip op voortgang, dependencies and decision-making.
+            </p>
+            <p>
+                Because the team was distributed across <strong>meerdere landen (Pakistan, India, Griekenland en Nederland)</strong>, 
+                alignment, handovers, and decisions needed to be tightly organized.
+            </p>
+            <p>
+                Without clear structure, questions and updates threatened to cause noise, waardoor snelheid 
+                en focus onder druk kwamen te staan.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Assignment</h2>
+            <p>
+                Set up a collaboration and communication flow with which the team could continue independently, 
+                while progress and decisions remained clear voor de opdrachtgever.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Approach / What I set up</h2>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>Slack</h4>
+                    <p>Communication & alignment</p>
+                </div>
+                <div class="tool-card">
+                    <h4>Notion</h4>
+                    <p>Documentation & progress tracking</p>
+                </div>
+            </div>
+
+            <h3>1. Slack structure</h3>
+            <ul>
+                <li>Project/discipline channels for collaboration</li>
+                <li>General channels for updates and alignment</li>
+                <li>Fixed moments for team calls and short check-ins</li>
+            </ul>
+
+            <h3>2. Notion as the central hub</h3>
+            <ul>
+                <li>All documentation in one place (agreements, decisions, plans)</li>
+                <li>Overview of tasks/progress per discipline</li>
+                <li>Transparency in status and next steps</li>
+            </ul>
+
+            <h3>3. Workflows for questions and alignment</h3>
+            <ul>
+                <li>Clear route: where to ask which question, and to whom</li>
+                <li>Reduced noise and duplicate work</li>
+            </ul>
+
+            <h3>4. Decision pyramid</h3>
+            <div class="process-flow">
+                <h4>Decision levels:</h4>
+                <ul>
+                    <li><strong>Team:</strong> What can the team decide themselves? (operational choices, technical implementation)</li>
+                    <li><strong>Project Leader:</strong> When does it escalate to me? (scope, priorities, conflicts)</li>
+                    <li><strong>Client:</strong> When must the client decide? (strategy, budget, direction)</li>
+                </ul>
+            </div>
+            <p>
+                This enabled faster execution without unnecessary escalation.
+            </p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>International collaboration</h3>
+            <p>
+                With team members in Pakistan, India, Greece and the Netherlands it was essential to:
+            </p>
+            <ul>
+                <li>Set up asynchronous communication well (not everyone is online at the same time)</li>
+                <li>Have clear documentation where everyone can work independently</li>
+                <li>Plan fixed check-in moments that work for all time zones</li>
+                <li>Bridge cultural differences in work style with explicit agreements</li>
+            </ul>
+        </div>
+
+        <div class="results-box">
+            <h3>Result / Delivery</h3>
+            <ul>
+                <li>The team could work in parallel with clear alignment and fewer misunderstandings</li>
+                <li>Progress became visible and consistent through Notion + structured Slack updates</li>
+                <li>The client retained control with minimal time investment</li>
+                <li>Faster decision-making thanks to clear mandates (decision pyramid)</li>
+                <li>Less noise and duplicate work through structured communication</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Skills</h2>
+            <p>
+                Process design • Stakeholder management • Project structure • Communication & cadence • 
+                Hybrid collaboration • International teamwork • Tool implementation
+            </p>
+        </div>
+
+        <div class="content-section">
+
+    <section class="cta-section">
+        <h2>Interested in Collaboration?</h2>
+        <p>I help organizations with process optimization and project coordination</p>
+        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Get in touch</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Ayoub Douider | <a href="index-en.html">Back to portfolio</a></p>
+            </a>
+            <div class="language-switcher">
+                <a href="case-terraquants.html" class="lang-btn">NL</a>
+                <a href="case-terraquants-en.html" class="lang-btn active">EN</a>
+            </div>
+    </footer>
+</body>
+</html>
