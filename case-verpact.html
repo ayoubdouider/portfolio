@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verpact – Recycle Café Koningsdag - Ayoub Douider</title>
+    <meta name="description" content="Operationeel verantwoordelijke bij het Verpact Recycle Café op de Keizersgracht tijdens Koningsdag 2026 in Amsterdam.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #ff6b6b;
+            --text: #2d2d2d;
+            --text-light: #666;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        .language-switcher { display: flex; gap: 0.5rem; }
+
+        .lang-btn {
+            padding: 0.5rem 0.75rem;
+            border: 2px solid #ddd;
+            background: white;
+            color: #666;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .lang-btn:hover { border-color: var(--accent); background: #fff5f5; color: var(--accent); }
+        .lang-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .case-hero {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #004d00 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .case-hero .container { max-width: 900px; margin: 0 auto; }
+
+        .case-category {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a5d6a7;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .case-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            display: block;
+            background: white;
+            padding: 2rem;
+        }
+
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section { margin-bottom: 3rem; }
+
+        .content-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul { list-style: none; padding-left: 0; }
+
+        .content-section ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: 12px;
+        }
+
+        .info-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .highlight-box {
+            background: #f1f8e9;
+            border-left: 4px solid #66bb6a;
+            padding: 1.5rem 2rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #1b5e20;
+            font-weight: 500;
+        }
+
+        .flow-box {
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            margin: 1.5rem 0;
+        }
+
+        .results-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .results-box h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: white; }
+        .results-box ul li { color: white; opacity: 0.95; }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 { font-family: 'DM Sans', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta-section p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        footer { background: #0f0f0f; color: white; padding: 2rem; text-align: center; }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .case-hero h1 { font-size: 2.5rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .content-section h2 { font-size: 1.8rem; }
+            .results-box { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="back-link">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Terug naar portfolio
+            </a>
+            <div class="language-switcher">
+                <a href="case-verpact.html" class="lang-btn active">🇳🇱 NL</a>
+                <a href="case-verpact-en.html" class="lang-btn">🇬🇧 EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="case-hero">
+        <div class="container">
+            <div class="case-category">Eventmanagement · Brand Activation · Koningsdag</div>
+            <h1>Verpact – Recycle Café</h1>
+            <p class="subtitle">Operationele uitvoering van een drijvende publieksactivatie op de Keizersgracht tijdens Koningsdag in Amsterdam</p>
+        </div>
+    </section>
+
+    <img src="Verpact-logo.png" alt="Verpact" class="featured-image" onerror="this.style.display='none'">
+
+    <div class="case-content">
+        <div class="info-grid">
+            <div class="info-item">
+                <h4>Rol</h4>
+                <p>Operationeel verantwoordelijke</p>
+            </div>
+            <div class="info-item">
+                <h4>Datum & Locatie</h4>
+                <p>27 april 2026 · Keizersgracht, Amsterdam</p>
+            </div>
+            <div class="info-item">
+                <h4>Opdrachtgever</h4>
+                <p>Verpact / Statiegeld Nederland</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Context</h2>
+            <p>
+                Voor Verpact werkte ik tijdens Koningsdag in Amsterdam aan het <strong>Verpact Recycle Café</strong>:
+                een tijdelijke, drijvende activatie op de Keizersgracht ter hoogte van de Runstraat. Het concept
+                was opgezet als een <strong>"omgekeerd café"</strong>: geen plek waar bezoekers iets kwamen halen,
+                maar juist een plek waar feestvierders op het water hun lege statiegeldflesjes, blikjes en ander
+                verpakkingsafval konden inleveren.
+            </p>
+            <div class="highlight-box">
+                <p>
+                    Boten konden stapvoets langs of door het drijvende inleverpunt varen zonder aan te meren —
+                    waardoor afval direct werd ingezameld en niet in de grachten terechtkwam.
+                </p>
+            </div>
+            <p>
+                De activatie was onderdeel van een bredere inzet van Verpact en Statiegeld Nederland om tijdens
+                Koningsdag vervuiling van straten en grachten te beperken.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Uitdaging</h2>
+            <p>
+                Koningsdag in Amsterdam is een van de drukste momenten van het jaar, zeker op en rond de grachten.
+                De activatie moest <strong>zichtbaar, toegankelijk en laagdrempelig</strong> zijn, maar tegelijkertijd
+                veilig en strak georganiseerd blijven.
+            </p>
+            <p>
+                De grootste uitdaging lag in het combineren van publieksactivatie, logistiek en veiligheid op een
+                drukke waterlocatie. Bezoekers kwamen niet lopend binnen, maar <strong>voeren langs met boten</strong>.
+                Daardoor moest de communicatie razendsnel duidelijk zijn, moest de crew goed gepositioneerd staan
+                en moest de doorstroom continu bewaakt worden.
+            </p>
+            <p>
+                Daarnaast moest het concept positief en gastvrij blijven aanvoelen: mensen moesten gestimuleerd
+                worden om hun afval in te leveren, zonder dat het als een verplichting voelde.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Mijn Rol</h2>
+            <p>
+                Ik was verantwoordelijk voor de operationele uitvoering op locatie en het aansturen van de crew
+                tijdens het event. Mijn focus lag op:
+            </p>
+            <ul>
+                <li>het coördineren van de crew op en rondom het Recycle Café</li>
+                <li>het bewaken van veiligheid en overzicht op een drukke Koningsdag-locatie</li>
+                <li>het zorgen voor duidelijke communicatie richting feestvierders op het water</li>
+                <li>het begeleiden van de inleverflow van flesjes, blikjes en verpakkingsafval</li>
+                <li>het afstemmen met productie, locatie en betrokken partijen</li>
+                <li>het oplossen van operationele situaties tijdens piekdrukte</li>
+                <li>het bewaken van de uitstraling van de activatie namens Verpact</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Aanpak</h2>
+            <p>
+                Ik werkte met een duidelijke taakverdeling binnen de crew, zodat iedereen wist waar hij of zij
+                verantwoordelijk voor was. De activatie moest snel te begrijpen zijn voor voorbijvarende bezoekers —
+                daarom lag de nadruk op zichtbaarheid, korte communicatie en een duidelijke flow:
+            </p>
+            <div class="flow-box">
+                signaleren → aanspreken → begeleiden → innemen → doorstroom vrijhouden
+            </div>
+            <p>
+                Tijdens het event hield ik continu overzicht op drukte, veiligheid en tempo. Waar nodig stuurde
+                ik crewleden bij, verplaatste ik mensen naar drukke punten en zorgde ik dat de activatie soepel
+                bleef draaien zonder de vaarroute of bezoekerservaring te verstoren.
+            </p>
+            <p>
+                Belangrijk was dat de crew niet alleen praktisch werkte, maar ook de juiste energie uitstraalde:
+                positief, actief en uitnodigend. Zo werd afval inleveren onderdeel van de Koningsdagbeleving
+                in plaats van een onderbreking ervan.
+            </p>
+        </div>
+
+        <div class="results-box">
+            <h3>Resultaat / Oplevering</h3>
+            <ul>
+                <li>Succesvolle uitvoering van een drijvende publieksactivatie op de Keizersgracht</li>
+                <li>Duidelijke en veilige bezoekersflow vanaf het water</li>
+                <li>Actieve inzameling van statiegeldflesjes, blikjes en verpakkingsafval</li>
+                <li>Goede samenwerking tussen crew, productie en betrokken partijen</li>
+                <li>Positieve vertaling van een duurzaamheidsboodschap naar een feestelijke beleving</li>
+                <li>Zichtbare merkactivatie voor Verpact tijdens een druk publieksevenement</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Geïnteresseerd in samenwerking?</h2>
+        <p>Ik help organisaties met eventmanagement en operationele uitvoering</p>
+        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Neem contact op</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Ayoub Douider | <a href="index.html">Terug naar portfolio</a></p>
+    </footer>
+</body>
+</html>

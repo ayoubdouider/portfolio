@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&A – Made for Moves - Ayoub Douider</title>
+    <meta name="description" content="Trainer en operationeel verantwoordelijke bij de internationale C&A Made for Moves brand activation in Antwerpen, Berlijn en Praag.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #ff6b6b;
+            --text: #2d2d2d;
+            --text-light: #666;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        .language-switcher { display: flex; gap: 0.5rem; }
+
+        .lang-btn {
+            padding: 0.5rem 0.75rem;
+            border: 2px solid #ddd;
+            background: white;
+            color: #666;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .lang-btn:hover { border-color: var(--accent); background: #fff5f5; color: var(--accent); }
+        .lang-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .case-hero {
+            background: linear-gradient(135deg, #003087 0%, #0050b3 50%, #1a237e 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .case-hero .container { max-width: 900px; margin: 0 auto; }
+
+        .case-category {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #90caf9;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .case-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            display: block;
+            background: white;
+            padding: 2rem;
+        }
+
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section { margin-bottom: 3rem; }
+
+        .content-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul { list-style: none; padding-left: 0; }
+
+        .content-section ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: 12px;
+        }
+
+        .info-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .tour-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 1rem;
+        }
+
+        .tour-table th {
+            background: var(--primary);
+            color: white;
+            padding: 0.9rem 1.2rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .tour-table th:first-child { border-radius: 8px 0 0 0; }
+        .tour-table th:last-child { border-radius: 0 8px 0 0; }
+
+        .tour-table td {
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .tour-table tr:nth-child(even) td { background: var(--secondary); }
+        .tour-table tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+        .tour-table tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+
+        .flow-box {
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            margin: 1.5rem 0;
+        }
+
+        .results-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .results-box h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: white; }
+        .results-box ul li { color: white; opacity: 0.95; }
+
+        .disclaimer {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            color: #856404;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .cities-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .city-card {
+            background: var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .city-card .city-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .city-card .city-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .city-card .city-loc {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 { font-family: 'DM Sans', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta-section p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        footer { background: #0f0f0f; color: white; padding: 2rem; text-align: center; }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .case-hero h1 { font-size: 2.5rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .content-section h2 { font-size: 1.8rem; }
+            .results-box { padding: 2rem; }
+            .cities-row { grid-template-columns: 1fr; }
+            .tour-table { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="back-link">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Terug naar portfolio
+            </a>
+            <div class="language-switcher">
+                <a href="case-ca.html" class="lang-btn active">🇳🇱 NL</a>
+                <a href="case-ca-en.html" class="lang-btn">🇬🇧 EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="case-hero">
+        <div class="container">
+            <div class="case-category">Eventmanagement · International Brand Activation</div>
+            <h1>C&A – Made for Moves</h1>
+            <p class="subtitle">Trainer & operationeel verantwoordelijke tijdens een internationale activatietour door Antwerpen, Berlijn en Praag</p>
+        </div>
+    </section>
+
+    <img src="C&A-logo.png" alt="C&A" class="featured-image" onerror="this.style.display='none'">
+
+    <div class="case-content">
+        <div class="info-grid">
+            <div class="info-item">
+                <h4>Rol</h4>
+                <p>Trainer & Operationeel verantwoordelijke</p>
+            </div>
+            <div class="info-item">
+                <h4>Periode</h4>
+                <p>April 2026</p>
+            </div>
+            <div class="info-item">
+                <h4>Steden</h4>
+                <p>Antwerpen · Berlijn · Praag</p>
+            </div>
+            <div class="info-item">
+                <h4>Opdrachtgever</h4>
+                <p>C&A</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Context</h2>
+            <p>
+                Voor C&A werkte ik aan de internationale brand activation <strong>Made for Moves / Denim Made for Moves</strong>.
+                De campagne stond in het teken van denim, beweging en zelfexpressie. Bezoekers werden uitgenodigd om de
+                collectie op een interactieve manier te ervaren in een <strong>Mirror Room</strong>, waar zij konden bewegen,
+                dansen en content maken voor de campagne <strong>#MadeForMoves</strong>.
+            </p>
+            <p>Ik draaide deze activatie in drie Europese steden:</p>
+
+            <div class="cities-row">
+                <div class="city-card">
+                    <div class="city-name">🇧🇪 Antwerpen</div>
+                    <div class="city-date">9 t/m 11 april 2026</div>
+                    <div class="city-loc">Frankrijklei 1 / Operaplein</div>
+                </div>
+                <div class="city-card">
+                    <div class="city-name">🇩🇪 Berlijn</div>
+                    <div class="city-date">16 t/m 18 april 2026</div>
+                    <div class="city-loc">Kurfürstendamm 21 / Kranzler-Eck</div>
+                </div>
+                <div class="city-card">
+                    <div class="city-name">🇨🇿 Praag</div>
+                    <div class="city-date">23 t/m 25 april 2026</div>
+                    <div class="city-loc">Palladium Shopping Center</div>
+                </div>
+            </div>
+
+            <p>
+                Elke stad had een eigen locatie, lokale crew en bezoekersdynamiek, maar de merkervaring moest overal
+                hetzelfde aanvoelen: energiek, toegankelijk en volledig in lijn met C&A.
+            </p>
+
+            <div class="cities-row" style="margin-top: 2.5rem;">
+                <div style="text-align:center;">
+                    <div style="font-weight:700; margin-bottom:0.75rem; color:var(--primary);">🇧🇪 Antwerpen</div>
+                    <video controls style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,0.15);">
+                        <source src="C&A-antwerpen.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div style="text-align:center;">
+                    <div style="font-weight:700; margin-bottom:0.75rem; color:var(--primary);">🇩🇪 Berlijn</div>
+                    <video controls style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,0.15);">
+                        <source src="C&A-berlijn.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div style="text-align:center;">
+                    <div style="font-weight:700; margin-bottom:0.75rem; color:var(--primary);">🇨🇿 Praag</div>
+                    <video controls style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,0.15);">
+                        <source src="C&A-praag.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Uitdaging</h2>
+            <p>
+                De grootste uitdaging was het bewaken van <strong>consistentie binnen een internationale tour</strong>.
+                De activatie moest in elke stad dezelfde kwaliteit, uitstraling en energie hebben, terwijl de
+                omstandigheden per locatie verschilden.
+            </p>
+            <p>
+                In Antwerpen, Berlijn en Praag werkte ik met verschillende teams, locaties en bezoekersstromen.
+                De briefing moest helder, praktisch en direct toepasbaar zijn. De crew moest snel begrijpen hoe zij
+                bezoekers moesten ontvangen, activeren en begeleiden — zonder dat de ervaring geforceerd of te
+                commercieel aanvoelde.
+            </p>
+            <p>
+                Daarnaast moest de activatie continu soepel blijven draaien tijdens publieksmomenten, piekdrukte
+                en contentmomenten in de Mirror Room.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Mijn Rol</h2>
+            <p>
+                Als trainer en operationeel verantwoordelijke was ik de schakel tussen campagneconcept, lokale crew
+                en uitvoering op de vloer. Mijn focus lag op:
+            </p>
+            <ul>
+                <li>het trainen van lokale teams in hospitality, merkbeleving en activatieflow</li>
+                <li>het vertalen van de C&A-campagne naar duidelijke instructies voor de crew</li>
+                <li>het bewaken van de juiste energie, tone of voice en uitstraling</li>
+                <li>het zorgen voor een soepele bezoekersflow richting de Mirror Room</li>
+                <li>het aansturen en bijsturen van crew tijdens live momenten</li>
+                <li>het schakelen met productie, locatie en lokale teams per stad</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Aanpak</h2>
+            <p>
+                Per stad startte ik met een compacte en praktische crewtraining. Daarin legde ik niet alleen uit
+                <em>wat</em> er moest gebeuren, maar vooral <em>hoe</em> de bezoekerservaring moest voelen.
+                De activatieflow werd teruggebracht naar een simpele structuur:
+            </p>
+            <div class="flow-box">
+                ontvangst → uitleg → activatie → contentmoment → doorstroom
+            </div>
+            <p>
+                Door deze flow duidelijk te maken, wist ieder teamlid precies waar hij of zij verantwoordelijk voor was.
+                Op locatie werkte ik met vaste posities, korte communicatielijnen en actieve bijsturing tijdens drukke momenten.
+            </p>
+            <p>
+                Waar nodig verplaatste ik crew naar de drukste punten, zodat de ervaring soepel bleef en bezoekers
+                persoonlijk begeleid werden. Hierdoor bleef de activatie per stad consistent, terwijl er genoeg
+                flexibiliteit was om in te spelen op lokale omstandigheden.
+            </p>
+        </div>
+
+        <div class="results-box">
+            <h3>Resultaat / Oplevering</h3>
+            <ul>
+                <li>Activatie succesvol uitgevoerd in <strong>3 Europese steden</strong></li>
+                <li>Goed gebriefde lokale crews in Antwerpen, Berlijn én Praag</li>
+                <li>Consistente merkervaring en uitstraling op alle drie de locaties</li>
+                <li>Soepele bezoekersflow en actieve betrokkenheid bij de Mirror Room</li>
+                <li>Energieke en toegankelijke publieksbeleving in lijn met de #MadeForMoves-campagne</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Geïnteresseerd in samenwerking?</h2>
+        <p>Ik help organisaties met eventmanagement en internationale brand activations</p>
+        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Neem contact op</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Ayoub Douider | <a href="index.html">Terug naar portfolio</a></p>
+    </footer>
+</body>
+</html>

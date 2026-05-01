@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESN Wereldrecord Sled Push - Ayoub Douider</title>
+    <title>Netflix Peaky Blinders - City Takeover Amsterdam - Ayoub Douider</title>
+    <meta name="description" content="Event manager for the Netflix Peaky Blinders city takeover in Amsterdam. Operational coordination of 60 performers across multiple locations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -58,9 +59,9 @@
         }
 
         .back-link:hover {
+            color: var(--accent);
         }
 
-        /* Language Switcher */
         .language-switcher {
             display: flex;
             gap: 0.5rem;
@@ -96,7 +97,7 @@
         }
 
         .case-hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, #1a0a00 0%, #2d1400 50%, #1a0000 100%);
             color: white;
             padding: 6rem 2rem 4rem;
             text-align: center;
@@ -136,8 +137,8 @@
             max-height: 400px;
             object-fit: contain;
             display: block;
-            background: white;
-            padding: 2rem;
+            background: #1a0a00;
+            padding: 2rem 0;
         }
 
         .case-content {
@@ -154,12 +155,6 @@
             font-family: 'DM Sans', sans-serif;
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .content-section h3 {
-            font-size: 1.5rem;
-            margin: 2rem 0 1rem;
             color: var(--primary);
         }
 
@@ -230,41 +225,19 @@
             color: white;
         }
 
-        .results-box p, .results-box ul li {
+        .results-box ul li {
             color: white;
             opacity: 0.95;
         }
 
-        .highlight-box {
-            background: #fff9f0;
-            border-left: 4px solid var(--accent);
-            padding: 2rem;
+        .disclaimer {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
             margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .highlight-box h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .news-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 1rem 0;
-        }
-
-        .news-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255,107,0,0.3);
+            font-size: 0.95rem;
+            color: #856404;
+            border-radius: 0 8px 8px 0;
         }
 
         .cta-section {
@@ -300,7 +273,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,107,0,0.3);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
         }
 
         footer {
@@ -320,16 +293,16 @@
                 font-size: 2.5rem;
             }
 
-            .featured-image {
-                max-height: 250px;
-            }
-
             .info-grid {
                 grid-template-columns: 1fr;
             }
 
             .content-section h2 {
                 font-size: 1.8rem;
+            }
+
+            .results-box {
+                padding: 2rem;
             }
         }
     </style>
@@ -344,21 +317,21 @@
                 Back to portfolio
             </a>
             <div class="language-switcher">
-                <a href="case-esn.html" class="lang-btn">🇳🇱 NL</a>
-                <a href="case-esn-en.html" class="lang-btn active">🇬🇧 EN</a>
+                <a href="case-peakyblinders.html" class="lang-btn">🇳🇱 NL</a>
+                <a href="case-peakyblinders-en.html" class="lang-btn active">🇬🇧 EN</a>
             </div>
         </div>
     </nav>
 
     <section class="case-hero">
         <div class="container">
-            <div class="case-category">EVENT MANAGEMENT</div>
-            <h1>ESN – World Record Sled Push</h1>
-            <p class="subtitle">24-hour world record event at Rotterdam Centraal</p>
+            <div class="case-category">Event Management</div>
+            <h1>Netflix – Peaky Blinders City Takeover</h1>
+            <p class="subtitle">Operational coordination of 60 performers during a Netflix city takeover in Amsterdam</p>
         </div>
     </section>
 
-    <img src="logo-esn.png" alt="ESN - Elite Sports Nutrition" class="featured-image">
+    <img src="logo-netflix.png" alt="Netflix" class="featured-image">
 
     <div class="case-content">
         <div class="info-grid">
@@ -368,108 +341,120 @@
             </div>
             <div class="info-item">
                 <h4>Date & Location</h4>
-                <p>Oct 2025 - Rotterdam CS</p>
-            </div>
-            <div class="info-item">
-                <h4>My Shift</h4>
-                <p>First 12 hours</p>
+                <p>21 March – Amsterdam</p>
             </div>
             <div class="info-item">
                 <h4>Team</h4>
-                <p>15 crew (my shift)</p>
+                <p>~60 performers</p>
             </div>
         </div>
-
-        <a href="https://www.ad.nl/rotterdam/wereldrecord-sled-push-na-geweldige-inspanning-ruimschoots-verbroken-op-rotterdam-centraal~a3ec8f42/" target="_blank" class="news-link">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
-            </svg>
-            Read the news article in Algemeen Dagblad
-        </a>
 
         <div class="content-section">
             <h2>Context</h2>
             <p>
-                ESN organized a 24-hour "sled push" world record event at Rotterdam Central Station, with the 
-                public, commuters, and a continuous livestream. The event had to meet the official record 
-                requirements while also running safely and smoothly in a busy station environment.
+                For Netflix, I worked as event manager on the Peaky Blinders promotion in Amsterdam. The activation
+                consisted of a city takeover in which a group of performers in Peaky Blinders style moved through
+                Amsterdam, with fixed moments for media, the public, and street visibility.
+            </p>
+            <p>
+                The event centred around a strong brand experience: the Peaky Blinders atmosphere had to be
+                visibly and credibly brought to life in the city, while the group had to move precisely on time
+                between different locations and transport moments.
             </p>
         </div>
 
         <div class="content-section">
             <h2>Challenge</h2>
             <p>
-                A record attempt in a public, high-traffic location adds extra complexity: there's a constant 
-                flow of participants and spectators, while you also have to comply with venue rules (NS), safety 
-                requirements, crowd control, and strict timing.
+                The operation had to run with great precision. With a large group of <strong>60 performers</strong>
+                on public locations in Amsterdam, everyone had to be ready at the right moment, fully dressed,
+                in the right transport, and moving according to the planned route.
             </p>
+            <p>The biggest challenge lay in the combination of:</p>
+            <ul>
+                <li>tight timing across multiple locations simultaneously</li>
+                <li>coordinating 60 performers at once</li>
+                <li>changing locations throughout the city</li>
+                <li>movement by transport and on foot</li>
+                <li>safety while walking through public space</li>
+                <li>media moments that had to land at exactly the right time</li>
+            </ul>
             <p>
-                At the same time, registration must be fully reliable and the experience needs to stay strong 
-                for both on-site audiences and the livestream.
+                Because the activation was visible to the public and media, the group not only had to be
+                operationally tight, but also continuously maintain the right appearance and formation.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>My Responsibility</h2>
+            <h2>My Responsibilities</h2>
             <p>
-                I was responsible for a <strong>team of 15 crew members during the first 12 hours</strong> 
-                and led the full on-floor execution:
+                I was responsible for the operational coordination of the full group of performers throughout
+                the activation. My responsibilities included:
             </p>
             <ul>
-                <li>welcoming, guiding, and briefing participants (rules + schedule)</li>
-                <li>facilitating warm-up and getting participants ready</li>
-                <li>ensuring compliance with rules (record rules + venue/NS agreements)</li>
-                <li>coordinating safety and injury response together with first aid</li>
-                <li>managing backstage/access control (participants only in warm-up/gear areas)</li>
-                <li>supporting the audience experience through alignment with the host</li>
-                <li>live tracking of pushes per record-organization requirements (including spot checks)</li>
-                <li>coordinating with the social media team and the 24/7 livestream crew</li>
-            </ul>
-        </div>
-
-        <div class="highlight-box">
-            <h3>Planning & Execution (my shift)</h3>
-            <ul>
-                <li><strong>36 participants</strong> split into groups of 6</li>
-                <li>Each group pushed for <strong>2 hours</strong>, meaning timing, changeovers, and pacing had to stay tight</li>
-                <li>Continuous staffing at the busiest points to prevent congestion (warm-up, start/finish, backstage)</li>
+                <li>ensuring all performers were present on time</li>
+                <li>making sure everyone was dressed and ready at the right moment</li>
+                <li>coordinating that the group was in the right transport on time</li>
+                <li>verifying the correct route was followed</li>
+                <li>guiding the group during movements through Amsterdam</li>
+                <li>monitoring safety while walking through public space</li>
+                <li>liaising with the media crew for the right timing and positions</li>
+                <li>communicating with crew and production during delays or changes</li>
             </ul>
         </div>
 
         <div class="content-section">
-            <h2>Approach / How I organized it</h2>
+            <h2>Approach</h2>
+            <p>
+                I structured the operation around clear timing, fixed gathering points, and continuous oversight
+                of the group. The flow consisted of fixed steps:
+            </p>
+            <p style="font-weight: 600; color: var(--primary); background: var(--secondary); padding: 1rem 1.5rem; border-radius: 8px;">
+                call time → costume/styling → gather → transport → route → media moment → next location
+            </p>
+            <p>At each phase I maintained oversight of who needed to be where and whether the group was ready to move. I actively managed punctuality, formation, and safety.</p>
             <ul>
-                <li><strong>Clear crew roles</strong> (participant flow, backstage, registration, safety)</li>
-                <li><strong>Fixed communication and escalation lines</strong> to switch fast during peak moments</li>
-                <li><strong>Checkpoints per group:</strong> briefing → warm-up → execution → monitoring → changeover</li>
-                <li><strong>Continuous alignment with host/livestream</strong> to keep the event tight for both on-site and online audiences</li>
+                <li>working with clear call times and departure times</li>
+                <li>checking all performers were fully dressed and ready</li>
+                <li>gathering performers on time for transport</li>
+                <li>keeping the group compact and manageable during movement</li>
+                <li>route guidance while walking through Amsterdam</li>
+                <li>continuous alignment with production and media crew</li>
+                <li>ensuring the group was visible to cameras and audience at the right moment</li>
+                <li>quick adjustments when timing, crowds, or traffic demanded it</li>
             </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Event impression (video)</h2>
+            <p>The video below gives an impression of the atmosphere and execution of the activation.</p>
+            <div style="display:flex; justify-content:center; margin: 2rem 0;">
+                <video controls style="width:100%; max-width:360px; border-radius:12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+                    <source src="peakyblinder.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
 
         <div class="results-box">
             <h3>Result / Delivery</h3>
             <ul>
-                <li>Smooth execution of the first 12 hours within a 24-hour live record setting</li>
-                <li>Safe, controlled operations in a busy station environment, in line with venue/NS agreements</li>
-                <li>Reliable registration per record requirements, with successful checks</li>
-                <li><strong>World record achieved! 🏆</strong></li>
+                <li>60 performers dressed, gathered, and transported on time</li>
+                <li>group at the right locations in the city at the right moments</li>
+                <li>safe guidance during all routes through Amsterdam</li>
+                <li>strong coordination with transport, production, and media crew</li>
+                <li>media moments correctly timed and executed</li>
+                <li>consistent Peaky Blinders brand experience throughout the activation</li>
             </ul>
         </div>
 
-        <div class="content-section">
-            <h2>Skills</h2>
-            <p>
-                Event operations • Team lead (15) • Run of show • Participant management • Crowd/guest flow • 
-                Safety & incident handling (with first aid) • Access control • Live tracking/registration • 
-                Stakeholder coordination • Communication under pressure
-            </p>
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> Details about internal processes and safety measures are limited due to confidentiality.
         </div>
+    </div>
 
-        <div class="content-section">
-
-        <section class="cta-section">
-        <h2>Interested in Collaboration?</h2>
-        <p>I help organizations with event management and process optimization</p>
+    <section class="cta-section">
+        <h2>Interested in working together?</h2>
+        <p>I help organisations with event management and operational coordination</p>
         <a href="mailto:a.douider@ad-business.nl" class="cta-button">Get in touch</a>
     </section>
 

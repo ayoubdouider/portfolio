@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TerraQuants - Ayoub Douider</title>
+    <title>Netflix Peaky Blinders - City Takeover Amsterdam - Ayoub Douider</title>
+    <meta name="description" content="Eventmanager bij de Netflix Peaky Blinders city takeover in Amsterdam. Operationele coördinatie van 60 performers op meerdere locaties.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -58,9 +59,9 @@
         }
 
         .back-link:hover {
+            color: var(--accent);
         }
 
-        /* Language Switcher */
         .language-switcher {
             display: flex;
             gap: 0.5rem;
@@ -96,7 +97,7 @@
         }
 
         .case-hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, #1a0a00 0%, #2d1400 50%, #1a0000 100%);
             color: white;
             padding: 6rem 2rem 4rem;
             text-align: center;
@@ -111,7 +112,7 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #ff6b6b;
+            color: var(--accent);
             font-weight: 600;
             margin-bottom: 1rem;
         }
@@ -136,8 +137,8 @@
             max-height: 400px;
             object-fit: contain;
             display: block;
-            background: white;
-            padding: 3rem;
+            background: #1a0a00;
+            padding: 2rem 0;
         }
 
         .case-content {
@@ -154,12 +155,6 @@
             font-family: 'DM Sans', sans-serif;
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .content-section h3 {
-            font-size: 1.5rem;
-            margin: 2rem 0 1rem;
             color: var(--primary);
         }
 
@@ -230,88 +225,19 @@
             color: white;
         }
 
-        .results-box p, .results-box ul li {
+        .results-box ul li {
             color: white;
             opacity: 0.95;
         }
 
-        .highlight-box {
-            background: #fff5f5;
-            border-left: 4px solid var(--accent);
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .highlight-box h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .tool-card {
-            background: white;
+        .disclaimer {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
             padding: 1.5rem;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .tool-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .tool-card h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .tool-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        .website-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 1rem 0;
-        }
-
-        .website-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44,95,124,0.3);
-        }
-
-        .process-flow {
-            background: white;
-            border: 2px solid var(--accent);
-            border-radius: 12px;
-            padding: 2rem;
             margin: 2rem 0;
-        }
-
-        .process-flow h4 {
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+            font-size: 0.95rem;
+            color: #856404;
+            border-radius: 0 8px 8px 0;
         }
 
         .cta-section {
@@ -347,7 +273,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(44,95,124,0.3);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
         }
 
         footer {
@@ -367,17 +293,16 @@
                 font-size: 2.5rem;
             }
 
-            .featured-image {
-                max-height: 250px;
-                padding: 2rem;
-            }
-
-            .info-grid, .tools-grid {
+            .info-grid {
                 grid-template-columns: 1fr;
             }
 
             .content-section h2 {
                 font-size: 1.8rem;
+            }
+
+            .results-box {
+                padding: 2rem;
             }
         }
     </style>
@@ -392,173 +317,144 @@
                 Terug naar portfolio
             </a>
             <div class="language-switcher">
-                <a href="case-terraquants.html" class="lang-btn active">🇳🇱 NL</a>
-                <a href="case-terraquants-en.html" class="lang-btn">🇬🇧 EN</a>
+                <a href="case-peakyblinders.html" class="lang-btn active">🇳🇱 NL</a>
+                <a href="case-peakyblinders-en.html" class="lang-btn">🇬🇧 EN</a>
             </div>
-            </a>
         </div>
     </nav>
 
     <section class="case-hero">
         <div class="container">
-            <div class="case-category">Inrichten en Verbeteren van Bedrijfsprocessen</div>
-            <h1>TerraQuants - Samenwerkingsflow Hybride Team</h1>
-            <p class="subtitle">Procesinrichting voor internationaal platform-team</p>
+            <div class="case-category">Eventmanagement</div>
+            <h1>Netflix – Peaky Blinders City Takeover</h1>
+            <p class="subtitle">Operationele coördinatie van 60 performers tijdens een Netflix city takeover in Amsterdam</p>
         </div>
     </section>
 
-    <img src="logo-terraquants.png" alt="TerraQuants - Strategic Market Intelligence" class="featured-image">
+    <img src="logo-netflix.png" alt="Netflix" class="featured-image">
 
     <div class="case-content">
         <div class="info-grid">
             <div class="info-item">
                 <h4>Rol</h4>
-                <p>Procesinrichting / Projectcoördinatie</p>
+                <p>Eventmanager (op locatie)</p>
             </div>
             <div class="info-item">
-                <h4>Tools</h4>
-                <p>Slack, Notion</p>
+                <h4>Datum & Locatie</h4>
+                <p>21 maart – Amsterdam</p>
             </div>
             <div class="info-item">
                 <h4>Team</h4>
-                <p>Hybride, internationaal</p>
-            </div>
-            <div class="info-item">
-                <h4>Locaties</h4>
-                <p>NL, PK, IN, GR</p>
+                <p>~60 performers</p>
             </div>
         </div>
-
-        <a href="https://terraquants.com" target="_blank" class="website-link">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-            </svg>
-            Bezoek TerraQuants website
-        </a>
 
         <div class="content-section">
             <h2>Context</h2>
             <p>
-                TerraQuants is een platform-initiatief van een ervaren investeerder. Doel: data uit verschillende 
-                bronnen samenbrengen voor betere beslissingen en dit toegankelijk maken via een platform + community, 
-                samen met externe specialisten (dev/data/design).
+                Voor Netflix werkte ik als eventmanager aan de Peaky Blinders-promotie in Amsterdam. De activatie
+                bestond uit een city takeover waarbij een groep performers in Peaky Blinders-stijl door Amsterdam
+                bewoog, met verschillende vaste momenten voor media, publiek en zichtbaarheid op straat.
             </p>
             <p>
-                Het team bestond uit web developers, data-analisten en designers die hybride en op projectbasis 
-                werkten, verspreid over meerdere landen.
+                Het event draaide om een sterke merkbeleving: de sfeer van Peaky Blinders moest zichtbaar en
+                geloofwaardig worden neergezet in de stad, terwijl de groep strak op tijd moest bewegen tussen
+                verschillende locaties en vervoersmomenten.
             </p>
         </div>
 
         <div class="content-section">
             <h2>Uitdaging</h2>
             <p>
-                Het team bestond uit web developers, data-analisten en designers die hybride en op projectbasis 
-                werkten. De opdrachtgever had beperkte tijd naast zijn reguliere werkzaamheden, maar wilde wel 
-                grip op voortgang, afhankelijkheden en besluitvorming.
+                De operatie moest zeer nauwkeurig verlopen. Met een grote groep van <strong>60 performers</strong>
+                op openbare locaties in Amsterdam moest iedereen op het juiste moment klaarstaan, volledig gekleed
+                zijn, in het juiste vervoer zitten en volgens de geplande route bewegen.
             </p>
+            <p>De grootste uitdaging zat in de combinatie van:</p>
+            <ul>
+                <li>strakke timing op meerdere locaties tegelijk</li>
+                <li>60 performers tegelijk aansturen</li>
+                <li>wisselende locaties in de stad</li>
+                <li>verplaatsingen met vervoer én te voet</li>
+                <li>veiligheid tijdens het lopen door openbare ruimte</li>
+                <li>media-momenten die precies goed moesten uitkomen</li>
+            </ul>
             <p>
-                Het team werkte bovendien vanuit <strong>meerdere landen (Pakistan, India, Griekenland en Nederland)</strong>, 
-                waardoor afstemming, overdrachten en besluitvorming extra strak ingericht moesten worden.
-            </p>
-            <p>
-                Zonder duidelijke structuur dreigden vragen en updates ruis te veroorzaken, waardoor snelheid 
-                en focus onder druk kwamen te staan.
+                Omdat de activatie zichtbaar was voor publiek en media, moest de groep niet alleen operationeel
+                kloppen, maar ook continu in de juiste uitstraling en formatie blijven.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>Opdracht</h2>
+            <h2>Mijn Verantwoordelijkheid</h2>
             <p>
-                Een samenwerking- en communicatieflow opzetten waarmee het team zelfstandig kon doorwerken, 
-                terwijl voortgang en beslissingen overzichtelijk bleven voor de opdrachtgever.
+                Ik was verantwoordelijk voor de operationele coördinatie van de volledige groep performers tijdens
+                de activatie. Mijn verantwoordelijkheden bestonden onder andere uit:
             </p>
+            <ul>
+                <li>zorgen dat alle performers op tijd aanwezig waren</li>
+                <li>bewaken dat iedereen tijdig gekleed en klaar was</li>
+                <li>coördineren dat de groep op het juiste moment in het vervoer zat</li>
+                <li>controleren dat de juiste route werd gevolgd</li>
+                <li>begeleiden van de groep tijdens verplaatsingen door Amsterdam</li>
+                <li>bewaken van veiligheid tijdens het lopen op straat</li>
+                <li>afstemmen met de media crew voor de juiste timing en posities</li>
+                <li>schakelen met crew en productie bij vertragingen of veranderingen</li>
+            </ul>
         </div>
 
         <div class="content-section">
-            <h2>Aanpak / Wat ik heb ingericht</h2>
-            
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <h4>Slack</h4>
-                    <p>Communicatie & afstemming</p>
-                </div>
-                <div class="tool-card">
-                    <h4>Notion</h4>
-                    <p>Documentatie & voortgang</p>
-                </div>
-            </div>
-
-            <h3>1. Slack-structuur</h3>
-            <ul>
-                <li>Project-/discipline-kanalen voor samenwerking</li>
-                <li>Algemene kanalen voor updates en afstemming</li>
-                <li>Vaste momenten voor teamcalls en korte check-ins</li>
-            </ul>
-
-            <h3>2. Notion als centrale hub</h3>
-            <ul>
-                <li>Alle documentatie op één plek (afspraken, besluiten, plannen)</li>
-                <li>Overzicht van taken/voortgang per discipline</li>
-                <li>Transparantie in status en next steps</li>
-            </ul>
-
-            <h3>3. Workflows voor vragen en afstemming</h3>
-            <ul>
-                <li>Duidelijke route: waar stel je welke vraag en bij wie?</li>
-                <li>Vermindering van ruis en dubbel werk</li>
-            </ul>
-
-            <h3>4. Beslissingspiramide</h3>
-            <div class="process-flow">
-                <h4>Beslissingsniveaus:</h4>
-                <ul>
-                    <li><strong>Team:</strong> Wat mag het team zelf besluiten? (operationele keuzes, technische implementatie)</li>
-                    <li><strong>Projectleider:</strong> Wanneer escaleert het naar mij? (scope, prioriteiten, conflicten)</li>
-                    <li><strong>Opdrachtgever:</strong> Wanneer moet de opdrachtgever beslissen? (strategie, budget, richting)</li>
-                </ul>
-            </div>
+            <h2>Aanpak</h2>
             <p>
-                Dit zorgde voor sneller doorpakken zonder onnodige escalaties.
+                Ik heb de operatie ingericht rondom duidelijke timing, vaste verzamelpunten en continue controle
+                op de groep. De flow bestond uit vaste stappen:
             </p>
+            <p style="font-weight: 600; color: var(--primary); background: var(--secondary); padding: 1rem 1.5rem; border-radius: 8px;">
+                calltime → kleding/styling → verzamelen → vervoer → route → media-moment → volgende locatie
+            </p>
+            <p>Per fase hield ik overzicht op wie waar moest zijn en of de groep klaar was om door te bewegen. Daarbij stuurde ik actief op punctualiteit, formatie en veiligheid.</p>
+            <ul>
+                <li>werken met duidelijke calltimes en vertrektijden</li>
+                <li>controleren of alle performers volledig gekleed en klaar waren</li>
+                <li>performers op tijd verzamelen voor vervoer</li>
+                <li>de groep compact en overzichtelijk houden tijdens verplaatsingen</li>
+                <li>routebegeleiding tijdens het lopen door Amsterdam</li>
+                <li>continu afstemmen met productie en media crew</li>
+                <li>zorgen dat de groep op het juiste moment zichtbaar was voor camera en publiek</li>
+                <li>snel bijsturen wanneer timing, drukte of verkeer daarom vroeg</li>
+            </ul>
         </div>
 
-        <div class="highlight-box">
-            <h3>Internationaal teamwerk</h3>
-            <p>
-                Met teamleden in Pakistan, India, Griekenland en Nederland was het essentieel om:
-            </p>
-            <ul>
-                <li>Asynchrone communicatie goed in te richten (niet iedereen is tegelijk online)</li>
-                <li>Heldere documentatie te hebben waar iedereen zelfstandig in kan werken</li>
-                <li>Vaste check-in momenten te plannen die voor alle tijdzones werkbaar zijn</li>
-                <li>Cultuurverschillen in werkstijl te overbruggen met expliciete afspraken</li>
-            </ul>
+        <div class="content-section">
+            <h2>Event-impressie (video)</h2>
+            <p>Onderstaande video geeft een indruk van de sfeer en uitvoering van de activatie.</p>
+            <div style="display:flex; justify-content:center; margin: 2rem 0;">
+                <video controls style="width:100%; max-width:360px; border-radius:12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+                    <source src="peakyblinder.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
 
         <div class="results-box">
             <h3>Resultaat / Oplevering</h3>
             <ul>
-                <li>Team kon parallel werken met duidelijke afstemming en minder miscommunicatie</li>
-                <li>Voortgang was zichtbaar en eenduidig via Notion + vaste Slack-updates</li>
-                <li>Opdrachtgever hield grip met beperkte tijdsinvestering</li>
-                <li>Snellere besluitvorming door heldere mandaten (beslissingspiramide)</li>
-                <li>Minder ruis en dubbel werk door gestructureerde communicatie</li>
+                <li>60 performers op tijd gekleed, verzameld en verplaatst</li>
+                <li>groep op het juiste moment op de juiste locaties in de stad</li>
+                <li>veilige begeleiding tijdens alle routes door Amsterdam</li>
+                <li>goede afstemming met vervoer, productie en media crew</li>
+                <li>media-momenten correct getimed en uitgevoerd</li>
+                <li>consistente Peaky Blinders-merkbeleving gedurende de gehele activatie</li>
             </ul>
         </div>
 
-        <div class="content-section">
-            <h2>Vaardigheden</h2>
-            <p>
-                Procesinrichting • Stakeholdermanagement • Projectstructuur • Communicatie & ritme • 
-                Hybrid samenwerken • Internationaal teamwork • Tool implementatie
-            </p>
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> Details over interne processen en veiligheidsmaatregelen zijn beperkt i.v.m. vertrouwelijkheid.
         </div>
+    </div>
 
-        <div class="content-section">
-
-        <section class="cta-section">
+    <section class="cta-section">
         <h2>Geïnteresseerd in samenwerking?</h2>
-        <p>Ik help organisaties met eventmanagement en procesoptimalisatie</p>
+        <p>Ik help organisaties met eventmanagement en operationele coördinatie</p>
         <a href="mailto:a.douider@ad-business.nl" class="cta-button">Neem contact op</a>
     </section>
 

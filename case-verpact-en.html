@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verpact – Recycle Café King's Day - Ayoub Douider</title>
+    <meta name="description" content="Operational lead for the Verpact Recycle Café on the Keizersgracht during King's Day 2026 in Amsterdam.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #ff6b6b;
+            --text: #2d2d2d;
+            --text-light: #666;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        .language-switcher { display: flex; gap: 0.5rem; }
+
+        .lang-btn {
+            padding: 0.5rem 0.75rem;
+            border: 2px solid #ddd;
+            background: white;
+            color: #666;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .lang-btn:hover { border-color: var(--accent); background: #fff5f5; color: var(--accent); }
+        .lang-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .case-hero {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #004d00 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .case-hero .container { max-width: 900px; margin: 0 auto; }
+
+        .case-category {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a5d6a7;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-hero h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .case-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            display: block;
+            background: white;
+            padding: 2rem;
+        }
+
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section { margin-bottom: 3rem; }
+
+        .content-section h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul { list-style: none; padding-left: 0; }
+
+        .content-section ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: 12px;
+        }
+
+        .info-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .highlight-box {
+            background: #f1f8e9;
+            border-left: 4px solid #66bb6a;
+            padding: 1.5rem 2rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #1b5e20;
+            font-weight: 500;
+        }
+
+        .flow-box {
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            margin: 1.5rem 0;
+        }
+
+        .results-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .results-box h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: white; }
+        .results-box ul li { color: white; opacity: 0.95; }
+
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 { font-family: 'DM Sans', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta-section p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        footer { background: #0f0f0f; color: white; padding: 2rem; text-align: center; }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .case-hero h1 { font-size: 2.5rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .content-section h2 { font-size: 1.8rem; }
+            .results-box { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index-en.html" class="back-link">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Back to portfolio
+            </a>
+            <div class="language-switcher">
+                <a href="case-verpact.html" class="lang-btn">🇳🇱 NL</a>
+                <a href="case-verpact-en.html" class="lang-btn active">🇬🇧 EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="case-hero">
+        <div class="container">
+            <div class="case-category">Event Management · Brand Activation · King's Day</div>
+            <h1>Verpact – Recycle Café</h1>
+            <p class="subtitle">Operational execution of a floating public activation on the Keizersgracht during King's Day in Amsterdam</p>
+        </div>
+    </section>
+
+    <img src="Verpact-logo.png" alt="Verpact" class="featured-image" onerror="this.style.display='none'">
+
+    <div class="case-content">
+        <div class="info-grid">
+            <div class="info-item">
+                <h4>Role</h4>
+                <p>Operational Lead</p>
+            </div>
+            <div class="info-item">
+                <h4>Date & Location</h4>
+                <p>27 April 2026 · Keizersgracht, Amsterdam</p>
+            </div>
+            <div class="info-item">
+                <h4>Client</h4>
+                <p>Verpact / Statiegeld Nederland</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Context</h2>
+            <p>
+                For Verpact, I worked on the <strong>Verpact Recycle Café</strong> during King's Day in Amsterdam:
+                a temporary, floating activation on the Keizersgracht near the Runstraat. The concept was set up
+                as a <strong>"reversed café"</strong> — not a place where visitors came to receive something, but
+                a place where revellers on the water could hand in their empty deposit bottles, cans and other
+                packaging waste.
+            </p>
+            <div class="highlight-box">
+                <p>
+                    Boats could slowly pass by or through the floating collection point without mooring —
+                    allowing waste to be collected directly before it ended up in the canals.
+                </p>
+            </div>
+            <p>
+                The activation was part of a broader effort by Verpact and Statiegeld Nederland to reduce
+                pollution on streets and canals during King's Day.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Challenge</h2>
+            <p>
+                King's Day in Amsterdam is one of the busiest events of the year, especially on and around the
+                canals. The activation had to be <strong>visible, accessible and low-threshold</strong>, while
+                remaining safe and well-organised at all times.
+            </p>
+            <p>
+                The biggest challenge was combining public activation, logistics and safety at a busy waterside
+                location. Visitors didn't arrive on foot — they <strong>passed by on boats</strong>. That meant
+                communication had to be immediately clear, the crew had to be well-positioned, and throughput
+                had to be continuously monitored.
+            </p>
+            <p>
+                On top of that, the concept had to feel positive and welcoming: people needed to be encouraged
+                to hand in their waste without it feeling like an obligation.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>My Role</h2>
+            <p>
+                I was responsible for the operational execution on location and directing the crew during
+                the event. My focus was on:
+            </p>
+            <ul>
+                <li>coordinating the crew on and around the Recycle Café</li>
+                <li>maintaining safety and oversight at a busy King's Day location</li>
+                <li>ensuring clear communication towards revellers on the water</li>
+                <li>managing the collection flow of bottles, cans and packaging waste</li>
+                <li>coordinating with production, the location and all involved parties</li>
+                <li>resolving operational situations during peak moments</li>
+                <li>maintaining the presentation of the activation on behalf of Verpact</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Approach</h2>
+            <p>
+                I worked with a clear division of tasks within the crew so everyone knew exactly what they
+                were responsible for. The activation had to be immediately understandable for passing visitors —
+                so the focus was on visibility, short communication and a clear flow:
+            </p>
+            <div class="flow-box">
+                spot → approach → guide → collect → keep the route clear
+            </div>
+            <p>
+                Throughout the event I continuously monitored crowd density, safety and pace. Where needed,
+                I redirected crew members, moved people to the busiest points and kept the activation running
+                smoothly without disrupting the waterway or visitor experience.
+            </p>
+            <p>
+                It was important that the crew didn't just work efficiently, but also radiated the right energy:
+                positive, active and inviting. That way, handing in waste became part of the King's Day
+                experience rather than an interruption of it.
+            </p>
+        </div>
+
+        <div class="results-box">
+            <h3>Result / Delivery</h3>
+            <ul>
+                <li>Successful execution of a floating public activation on the Keizersgracht</li>
+                <li>Clear and safe visitor flow from the water</li>
+                <li>Active collection of deposit bottles, cans and packaging waste</li>
+                <li>Strong collaboration between crew, production and all involved parties</li>
+                <li>Positive translation of a sustainability message into a festive experience</li>
+                <li>Visible brand activation for Verpact during a high-traffic public event</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Interested in working together?</h2>
+        <p>I help organisations with event management and operational execution</p>
+        <a href="mailto:a.douider@ad-business.nl" class="cta-button">Get in touch</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Ayoub Douider | <a href="index-en.html">Back to portfolio</a></p>
+    </footer>
+</body>
+</html>
