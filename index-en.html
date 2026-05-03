@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -431,18 +431,187 @@
         }
 
         @media (max-width: 600px) {
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
+            .hero-text h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2.5rem; }
+            .profile-img { width: 220px; height: 220px; }
+            .hero-buttons { flex-direction: column; }
+            .footer-buttons { flex-direction: column; align-items: center; }
+        }
 
-            .section-title {
-                font-size: 2.5rem;
-            }
+        /* Hero Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            animation: slideInRight 1s ease-out 1s both;
+        }
 
-            .profile-img {
-                width: 220px;
-                height: 220px;
-            }
+        .btn-primary {
+            padding: 0.85rem 2rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,107,107,0.4);
+        }
+
+        .btn-outline {
+            padding: 0.85rem 2rem;
+            background: transparent;
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Hire Section */
+        .hire-section {
+            padding: 2.5rem 2rem;
+            background: var(--primary);
+        }
+
+        .hire-label {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.25rem;
+        }
+
+        .hire-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .hire-badge {
+            padding: 0.5rem 1.2rem;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Case card updates */
+        .case-label {
+            display: inline-block;
+            padding: 0.3rem 0.75rem;
+            background: var(--accent);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .case-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-meta-item {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .case-meta-item strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .case-challenge {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* Footer CTA */
+        .footer-cta-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-cta-sub {
+            opacity: 0.65;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .footer-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .footer-btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .footer-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255,107,107,0.4);
+        }
+
+        .footer-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .footer-btn-outline:hover {
+            border-color: white;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -451,10 +620,10 @@
     <section class="hero">
         <!-- Language Switcher -->
         <div class="language-switcher">
-                <a href="index.html" class="lang-btn">🇳🇱 NL</a>
-                <a href="index-en.html" class="lang-btn active">🇬🇧 EN</a>
-            </div>
-        
+            <a href="index.html" class="lang-btn">🇳🇱 NL</a>
+            <a href="index-en.html" class="lang-btn active">🇬🇧 EN</a>
+        </div>
+
         <div class="container">
             <div class="hero-content">
                 <div class="hero-image">
@@ -464,10 +633,7 @@
                     <h1>Portfolio<br>Ayoub Douider</h1>
                     <p class="subtitle">Event Manager | On-site Operational Lead | Crew Trainer</p>
                     <p class="description">
-                        I make sure live events and brand activations run exactly as they should — from crew briefing
-                        and routing to safety and brand experience on the floor. With experience at major brands like
-                        Netflix and C&A, I lead teams of 10 to 60+ people across varied locations and under time pressure.
-                        My strength: quick oversight, clear communication and the composure to adjust when it counts.
+                        I make sure live events and brand activations run exactly as they should — from crew briefing and guest flow to safety, timing and brand experience on the floor. With experience at brands like Netflix, C&A, ESN and Verpact, I lead teams on busy locations under time pressure and with an eye for detail.
                     </p>
                     <div class="contact-info">
                         <a href="mailto:a.douider@ad-business.nl" class="contact-item">
@@ -489,179 +655,193 @@
                             LinkedIn
                         </a>
                     </div>
+                    <div class="hero-buttons">
+                        <a href="mailto:a.douider@ad-business.nl" class="btn-primary">Get in touch</a>
+                        <a href="#cases" class="btn-outline">View cases</a>
+                        <a href="https://www.linkedin.com/in/ayoub-douider" target="_blank" class="btn-outline">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Hire Section -->
+    <div class="hire-section">
+        <p class="hire-label">Available for hire</p>
+        <div class="hire-badges">
+            <span class="hire-badge">On-site Event Management</span>
+            <span class="hire-badge">Operational Coordination</span>
+            <span class="hire-badge">Crew Management & Training</span>
+            <span class="hire-badge">Brand Activations</span>
+            <span class="hire-badge">Guest Flow & Audience Management</span>
+            <span class="hire-badge">Programme Flow & Co-hosting</span>
+            <span class="hire-badge">International Activation Tours</span>
+            <span class="hire-badge">City Takeovers</span>
+        </div>
+    </div>
+
     <!-- Skills Section -->
     <section class="skills-section">
         <div class="container">
-            <h2 class="section-title">What I'm good at</h2>
-            <p class="section-subtitle">Pragmatic, reliable, and results-driven</p>
+            <h2 class="section-title">What I can be hired for</h2>
+            <p class="section-subtitle">On-site operational lead for events, activations and campaigns</p>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Crew Management & Operational Coordination</h3>
-                    <p>Leading teams of 10 to 60+ people on location — under time pressure, across changing locations and in complex environments</p>
+                    <h3>On-site Event Management</h3>
+                    <p>Taking operational responsibility during live events, activations and public moments — from preparation to delivery.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Crew Management & Briefing</h3>
+                    <p>Directing teams quickly, clearly and practically so everyone knows what to do — even under time pressure.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Brand Activation Operations</h3>
+                    <p>Translating campaign concepts into strong on-the-floor execution, aligned with brand experience and tone of voice.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Guest Flow & Audience Management</h3>
-                    <p>Moving large groups of visitors smoothly through an activation — from welcome and routing to throughput and turnaround</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Crew Training & Briefing</h3>
-                    <p>Briefing local teams quickly and practically so everyone understands the brand experience and can execute it immediately</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Brand Experience & Activation</h3>
-                    <p>Maintaining the atmosphere, energy and presentation of a campaign on the floor — from Netflix to C&A</p>
+                    <p>Guiding visitors, participants or audiences smoothly through an activation or programme — from arrival to throughput.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Safety & On-site Logistics</h3>
-                    <p>Keeping oversight at busy, changing locations — outdoor spaces, waterways, public venues and multi-day events</p>
+                    <p>Maintaining oversight at busy locations: public spaces, waterways, venues and multi-day events.</p>
                 </div>
                 <div class="skill-card">
-                    <h3>Moderator & Programme Direction</h3>
-                    <p>Leading programmes, managing energy and taking an audience along — sharp, accessible and with clear direction</p>
+                    <h3>Programme Flow & Co-hosting</h3>
+                    <p>Managing energy, timing and transitions during events, talks and workshops — sharp, accessible and with clear direction.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Cases Section -->
-    <section class="cases-section">
+    <section class="cases-section" id="cases">
         <div class="container">
-            <h2 class="section-title">Case Studies</h2>
+            <h2 class="section-title">Cases</h2>
             <p class="cases-intro">
-                A selection of projects in Event Management and Process Optimization.
+                A selection of events and brand activations where I was the operational lead on location.
             </p>
-            <!-- Eventmanagement Category -->
-            <div class="category-section">
-                <h3 class="category-title">▼ EVENT MANAGEMENT</h3>
-                <div class="cases-grid">
-                    <!-- Netflix Case -->
-                    <div class="case-card" onclick="window.location.href='case-netflix-en.html'">
-                        <img src="logo-netflix.png" alt="Netflix Event" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">Netflix – Stranger Things S5 screening & Clubhouse (Amsterdam)</h3>
-                            <p class="case-description">
-                                During the Stranger Things S5 screening + Clubhouse in Amsterdam, I was the on-site event manager 
-                                for Netflix, responsible for ~30 crew members.
-                            </p>
-                            <a href="case-netflix-en.html" class="case-link">
-                                Read more →
-                            </a>
+            <div class="cases-grid">
+                <!-- Netflix Stranger Things -->
+                <div class="case-card" onclick="window.location.href='case-netflix-en.html'">
+                    <img src="logo-netflix.png" alt="Netflix" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">On-site Event Management</span>
+                        <h3 class="case-title">Netflix – Stranger Things S5 Screening & Clubhouse</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Westergas, Amsterdam</span>
+                            <span class="case-meta-item">👥 <strong>±30 crew</strong></span>
+                            <span class="case-meta-item">🗓 Nov 2025</span>
                         </div>
+                        <p class="case-challenge">250 guests per group received, seated and moved through in 30 minutes — 2 evenings × 2 groups.</p>
+                        <a href="case-netflix-en.html" class="case-link">Read case →</a>
                     </div>
+                </div>
 
-                    <!-- ESN Case -->
-                    <div class="case-card" onclick="window.location.href='case-esn-en.html'">
-                        <img src="logo-esn.png" alt="ESN Event" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">ESN – World Record Sled Push (Rotterdam Central Station)</h3>
-                            <p class="case-description">
-                                During the ESN World Record Sled Push event at Rotterdam Central Station, I was team lead for 15 crew 
-                                members during the first 12 hours of the 24-hour record attempt.
-                            </p>
-                            <a href="case-esn-en.html" class="case-link">
-                                Read more →
-                            </a>
+                <!-- C&A Made for Moves -->
+                <div class="case-card" onclick="window.location.href='case-ca-en.html'">
+                    <img src="C&A-logo.png" alt="C&A" class="case-image" onerror="this.style.display='none'">
+                    <div class="case-content">
+                        <span class="case-label">International Brand Activation</span>
+                        <h3 class="case-title">C&A – Made for Moves</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Antwerp · Berlin · Prague</span>
+                            <span class="case-meta-item">🌍 <strong>3 European cities</strong></span>
+                            <span class="case-meta-item">🗓 April 2026</span>
                         </div>
+                        <p class="case-challenge">Training local crews and delivering a consistent brand experience across three European cities.</p>
+                        <a href="case-ca-en.html" class="case-link">Read case →</a>
                     </div>
+                </div>
 
-                    <!-- NAH+ Case -->
-                    <div class="case-card" onclick="window.location.href='case-nah-en.html'">
-                        <img src="logo-nah.png" alt="NAH+ Event" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">Expertise Network NAH+ – Co-host & program flow</h3>
-                            <p class="case-description">
-                                At the festive NAH+ event in Utrecht, I was co-host and co-responsible for
-                                directing and managing the program flow.
-                            </p>
-                            <a href="case-nah-en.html" class="case-link">
-                                Read more →
-                            </a>
+                <!-- ESN -->
+                <div class="case-card" onclick="window.location.href='case-esn-en.html'">
+                    <img src="logo-esn.png" alt="ESN" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">On-site Event Management</span>
+                        <h3 class="case-title">ESN – World Record Sled Push</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Rotterdam Central</span>
+                            <span class="case-meta-item">👥 <strong>15 crew</strong></span>
+                            <span class="case-meta-item">⏱ 12-hour shift</span>
                         </div>
+                        <p class="case-challenge">12 hours of participant flow, safety and livestream coordination during a 24-hour world record attempt.</p>
+                        <a href="case-esn-en.html" class="case-link">Read case →</a>
                     </div>
+                </div>
 
-                    <!-- Verpact Case -->
-                    <div class="case-card" onclick="window.location.href='case-verpact-en.html'">
-                        <img src="Verpact-logo.png" alt="Verpact Recycle Café" class="case-image" onerror="this.style.display='none'">
-                        <div class="case-content">
-                            <h3 class="case-title">Verpact – Recycle Café (Keizersgracht, Amsterdam)</h3>
-                            <p class="case-description">
-                                On King's Day I coordinated the operational execution of the floating Verpact Recycle Café
-                                on the Keizersgracht, where revellers on the water could hand in their packaging waste.
-                            </p>
-                            <a href="case-verpact-en.html" class="case-link">
-                                Read more →
-                            </a>
+                <!-- Verpact -->
+                <div class="case-card" onclick="window.location.href='case-verpact-en.html'">
+                    <img src="Verpact-logo.png" alt="Verpact" class="case-image" onerror="this.style.display='none'">
+                    <div class="case-content">
+                        <span class="case-label">Brand Activation</span>
+                        <h3 class="case-title">Verpact – Recycle Café</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Keizersgracht, Amsterdam</span>
+                            <span class="case-meta-item">🗓 King's Day 2026</span>
                         </div>
+                        <p class="case-challenge">Running a floating public activation on King's Day safely and hospitably on the water.</p>
+                        <a href="case-verpact-en.html" class="case-link">Read case →</a>
                     </div>
+                </div>
 
-                    <!-- C&A Case -->
-                    <div class="case-card" onclick="window.location.href='case-ca-en.html'">
-                        <img src="C&A-logo.png" alt="C&A Made for Moves" class="case-image" onerror="this.style.display='none'">
-                        <div class="case-content">
-                            <h3 class="case-title">C&A – Made for Moves (Antwerp · Berlin · Prague)</h3>
-                            <p class="case-description">
-                                As trainer and operational lead, I managed the international C&A brand activation
-                                across three European cities, working with local crews and a Mirror Room experience for visitors.
-                            </p>
-                            <a href="case-ca-en.html" class="case-link">
-                                Read more →
-                            </a>
+                <!-- Peaky Blinders -->
+                <div class="case-card" onclick="window.location.href='case-peakyblinders-en.html'">
+                    <img src="logo-netflix.png" alt="Netflix Peaky Blinders" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">City Takeover</span>
+                        <h3 class="case-title">Netflix – Peaky Blinders City Takeover</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Amsterdam</span>
+                            <span class="case-meta-item">👥 <strong>60 performers</strong></span>
+                            <span class="case-meta-item">🗓 21 March</span>
                         </div>
+                        <p class="case-challenge">Moving 60 performers on time, safely and in the right presentation through Amsterdam for media and public.</p>
+                        <a href="case-peakyblinders-en.html" class="case-link">Read case →</a>
                     </div>
+                </div>
 
-                    <!-- Peaky Blinders Case -->
-                    <div class="case-card" onclick="window.location.href='case-peakyblinders-en.html'">
-                        <img src="logo-netflix.png" alt="Netflix Peaky Blinders" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">Netflix – Peaky Blinders City Takeover (Amsterdam)</h3>
-                            <p class="case-description">
-                                During the Netflix Peaky Blinders city takeover in Amsterdam, I was the on-site event manager
-                                responsible for the operational coordination of ~60 performers.
-                            </p>
-                            <a href="case-peakyblinders-en.html" class="case-link">
-                                Read more →
-                            </a>
+                <!-- NAH+ -->
+                <div class="case-card" onclick="window.location.href='case-nah-en.html'">
+                    <img src="logo-nah.png" alt="NAH+" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">Co-hosting & Programme Flow</span>
+                        <h3 class="case-title">NAH+ – Co-host & Programme Flow</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Utrecht</span>
+                            <span class="case-meta-item">👥 <strong>±200 guests</strong></span>
                         </div>
+                        <p class="case-challenge">Connecting programme, workshops, speakers and transitions smoothly as co-host.</p>
+                        <a href="case-nah-en.html" class="case-link">Read case →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Procesoptimalisatie Category -->
+            <!-- Process optimisation (hidden) -->
             <div class="category-section" style="display:none;">
                 <h3 class="category-title">▼ DESIGNING AND IMPROVING BUSINESS PROCESSES</h3>
                 <div class="cases-grid">
-                    <!-- TerraQuants Case -->
                     <div class="case-card" onclick="window.location.href='case-terraquants-en.html'">
                         <img src="logo-terraquants.png" alt="TerraQuants Project" class="case-image">
                         <div class="case-content">
                             <h3 class="case-title">TerraQuants – Setting up a collaboration flow for a hybrid project team</h3>
                             <p class="case-description">
-                                I set up the collaboration for a hybrid team (developers, data analysts, and designers) 
+                                I set up the collaboration for a hybrid team (developers, data analysts, and designers)
                                 using Slack + Notion, with clear decision-making and communication rules.
                             </p>
-                            <a href="case-terraquants-en.html" class="case-link">
-                                Read more →
-                            </a>
+                            <a href="case-terraquants-en.html" class="case-link">Read more →</a>
                         </div>
                     </div>
 
-                    <!-- Schunk Case -->
                     <div class="case-card" onclick="window.location.href='case-schunk-en.html'">
                         <img src="logo-schunk.png" alt="Schunk Project" class="case-image">
                         <div class="case-content">
                             <h3 class="case-title">Schunk Xycarb Technology – Improving operations performance & planning with data</h3>
                             <p class="case-description">
-                                I translated machine and SAP data into management insights and improvements: a daily automated 
+                                I translated machine and SAP data into management insights and improvements: a daily automated
                                 Power BI dashboard for efficiency and bottlenecks.
                             </p>
-                            <a href="case-schunk-en.html" class="case-link">
-                                Read more →
-                            </a>
+                            <a href="case-schunk-en.html" class="case-link">Read more →</a>
                         </div>
                     </div>
                 </div>
@@ -672,9 +852,15 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p class="footer-text">Available for freelance/interim assignments (short-term, long-term, or project-based).</p>
-            <p class="footer-text">✨ Feel free to get in touch.</p>
-            <p style="margin-top: 2rem; opacity: 0.7;">© 2026 Ayoub Douider. All rights reserved.</p>
+            <p class="footer-cta-text">Are you organising an event, activation or campaign where on-site execution needs to be sharp?</p>
+            <p class="footer-cta-sub">I'm happy to think along about crew, flow, timing and operations.</p>
+            <div class="footer-buttons">
+                <a href="mailto:a.douider@ad-business.nl" class="footer-btn footer-btn-primary">Email me</a>
+                <a href="https://www.linkedin.com/in/ayoub-douider" target="_blank" class="footer-btn footer-btn-outline">LinkedIn</a>
+                <a href="#cases" class="footer-btn footer-btn-outline">View cases</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.5; font-size: 0.9rem;">© 2026 Ayoub Douider. All rights reserved.</p>
         </div>
     </footer>
-
+</body>
+</html>

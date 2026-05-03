@@ -431,18 +431,187 @@
         }
 
         @media (max-width: 600px) {
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
+            .hero-text h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2.5rem; }
+            .profile-img { width: 220px; height: 220px; }
+            .hero-buttons { flex-direction: column; }
+            .footer-buttons { flex-direction: column; align-items: center; }
+        }
 
-            .section-title {
-                font-size: 2.5rem;
-            }
+        /* Hero Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            animation: slideInRight 1s ease-out 1s both;
+        }
 
-            .profile-img {
-                width: 220px;
-                height: 220px;
-            }
+        .btn-primary {
+            padding: 0.85rem 2rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,107,107,0.4);
+        }
+
+        .btn-outline {
+            padding: 0.85rem 2rem;
+            background: transparent;
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Hire Section */
+        .hire-section {
+            padding: 2.5rem 2rem;
+            background: var(--primary);
+        }
+
+        .hire-label {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.25rem;
+        }
+
+        .hire-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .hire-badge {
+            padding: 0.5rem 1.2rem;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Case card updates */
+        .case-label {
+            display: inline-block;
+            padding: 0.3rem 0.75rem;
+            background: var(--accent);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .case-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-meta-item {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .case-meta-item strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .case-challenge {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* Footer CTA */
+        .footer-cta-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-cta-sub {
+            opacity: 0.65;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .footer-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .footer-btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .footer-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255,107,107,0.4);
+        }
+
+        .footer-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .footer-btn-outline:hover {
+            border-color: white;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -464,10 +633,7 @@
                     <h1>Portfolio<br>Ayoub Douider</h1>
                     <p class="subtitle">Eventmanager | Operationeel verantwoordelijke op locatie | Crewtrainer</p>
                     <p class="description">
-                        Ik zorg dat live events en brand activations operationeel kloppen — van crewbriefing en routing
-                        tot veiligheid en merkbeleving op de vloer. Met ervaring bij A-merken als Netflix en C&A stuur ik
-                        teams aan van 10 tot 60+ mensen, op uiteenlopende locaties en onder tijdsdruk. Mijn kracht: snel
-                        overzicht, heldere communicatie en de rust om bij te sturen wanneer het er écht op aankomt.
+                        Ik zorg dat live events en brand activations operationeel kloppen — van crewbriefing, routing en gastenflow tot veiligheid, timing en merkbeleving op de vloer. Met ervaring bij merken als Netflix, C&A, ESN en Verpact stuur ik teams aan op drukke locaties, onder tijdsdruk en met oog voor beleving.
                     </p>
                     <div class="contact-info">
                         <a href="mailto:a.douider@ad-business.nl" class="contact-item">
@@ -489,144 +655,164 @@
                             LinkedIn
                         </a>
                     </div>
+                    <div class="hero-buttons">
+                        <a href="mailto:a.douider@ad-business.nl" class="btn-primary">Neem contact op</a>
+                        <a href="#cases" class="btn-outline">Bekijk cases</a>
+                        <a href="https://www.linkedin.com/in/ayoub-douider" target="_blank" class="btn-outline">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Hire Section -->
+    <div class="hire-section">
+        <p class="hire-label">In te huren voor</p>
+        <div class="hire-badges">
+            <span class="hire-badge">On-site Eventmanagement</span>
+            <span class="hire-badge">Operationele coördinatie op locatie</span>
+            <span class="hire-badge">Crewmanagement & crewtraining</span>
+            <span class="hire-badge">Brand activations</span>
+            <span class="hire-badge">Gastenflow & publiekssturing</span>
+            <span class="hire-badge">Programmaflow & co-hosting</span>
+            <span class="hire-badge">Internationale activatietours</span>
+            <span class="hire-badge">City takeovers</span>
+        </div>
+    </div>
+
     <!-- Skills Section -->
     <section class="skills-section">
         <div class="container">
-            <h2 class="section-title">Waar ik sterk in ben</h2>
-            <p class="section-subtitle">Pragmatisch, betrouwbaar en resultaatgericht</p>
+            <h2 class="section-title">Waar ik voor inzetbaar ben</h2>
+            <p class="section-subtitle">Operationeel verantwoordelijke op locatie, bij events, activaties en campagnes</p>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Crewmanagement & operationele coördinatie</h3>
-                    <p>Teams van 10 tot 60+ mensen aansturen op locatie — onder tijdsdruk, op wisselende locaties en in complexe omgevingen</p>
+                    <h3>On-site eventmanagement</h3>
+                    <p>Operationele verantwoordelijkheid nemen tijdens live events, activaties en publieksmomenten — van voorbereiding tot oplevering.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Crewmanagement & briefing</h3>
+                    <p>Teams snel, duidelijk en praktisch aansturen zodat iedereen weet wat er moet gebeuren — ook onder tijdsdruk.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Brand activation operations</h3>
+                    <p>Campagneconcepten vertalen naar een sterke uitvoering op de vloer, in lijn met de merkbeleving en tone of voice.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Gastenflow & publiekssturing</h3>
-                    <p>Grote groepen bezoekers soepel door een activatie leiden — van ontvangst en routing tot doorstroom en ombouw</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Crewtraining & briefing</h3>
-                    <p>Lokale teams snel en praktisch briefen zodat iedereen de merkbeleving begrijpt en direct kan uitvoeren</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Merkbeleving & brand activation</h3>
-                    <p>De sfeer, energie en uitstraling van een campagne bewaken op de vloer — van Netflix tot C&A</p>
+                    <p>Bezoekers, deelnemers of publiek soepel door een activatie of programma begeleiden — van ontvangst tot doorstroom.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Veiligheid & logistiek op locatie</h3>
-                    <p>Overzicht houden op drukke, wisselende locaties — buitenruimtes, water, openbare plekken en meerdaagse events</p>
+                    <p>Overzicht houden op drukke locaties: openbare ruimtes, waterlocaties, publieke plekken en meerdaagse events.</p>
                 </div>
                 <div class="skill-card">
-                    <h3>Dagvoorzitter & programmaregie</h3>
-                    <p>Programma's leiden, energie bewaken en een publiek meenemen — scherp, toegankelijk en met duidelijke lijnen</p>
+                    <h3>Programmaflow & co-hosting</h3>
+                    <p>Energie, timing en overgangen bewaken tijdens bijeenkomsten, talks en workshops — scherp en toegankelijk.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Cases Section -->
-    <section class="cases-section">
+    <section class="cases-section" id="cases">
         <div class="container">
             <h2 class="section-title">Cases</h2>
             <p class="cases-intro">
-                Een selectie van projecten in Eventmanagement en Procesoptimalisatie.
+                Een selectie van events en brand activations waarbij ik operationeel verantwoordelijk was op locatie.
             </p>
-            <!-- Eventmanagement Category -->
-            <div class="category-section">
-                <h3 class="category-title">▼ Eventmanagement</h3>
-                <div class="cases-grid">
-                    <!-- Netflix Case -->
-                    <div class="case-card" onclick="window.location.href='case-netflix.html'">
-                        <img src="logo-netflix.png" alt="Netflix Event" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">Netflix - Stranger Things S5 screening & Clubhouse (Amsterdam)</h3>
-                            <p class="case-description">
-                                Tijdens de Stranger Things S5 screening + Clubhouse in Amsterdam was ik eventmanager op locatie 
-                                voor Netflix met verantwoordelijkheid over ~30 crew.
-                            </p>
-                            <a href="case-netflix.html" class="case-link">
-                                Lees meer →
-                            </a>
+            <div class="cases-grid">
+                <!-- Netflix Stranger Things -->
+                <div class="case-card" onclick="window.location.href='case-netflix.html'">
+                    <img src="logo-netflix.png" alt="Netflix" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">On-site Eventmanagement</span>
+                        <h3 class="case-title">Netflix – Stranger Things S5 Screening & Clubhouse</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Westergas, Amsterdam</span>
+                            <span class="case-meta-item">👥 <strong>±30 crew</strong></span>
+                            <span class="case-meta-item">🗓 Nov 2025</span>
                         </div>
+                        <p class="case-challenge">250 gasten per groep in 30 minuten ontvangen, placeren en doorsturen — 2 avonden × 2 groepen.</p>
+                        <a href="case-netflix.html" class="case-link">Lees case →</a>
                     </div>
+                </div>
 
-                    <!-- ESN Case -->
-                    <div class="case-card" onclick="window.location.href='case-esn.html'">
-                        <img src="logo-esn.png" alt="ESN Event" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">ESN - Wereldrecord Sled Push (Rotterdam Centraal)</h3>
-                            <p class="case-description">
-                                Tijdens het ESN Wereldrecord Sled Push event op Rotterdam Centraal was ik teamleider over 15 crewleden 
-                                in de eerste 12 uur van de 24-uurs recordpoging.
-                            </p>
-                            <a href="case-esn.html" class="case-link">
-                                Lees meer →
-                            </a>
+                <!-- C&A Made for Moves -->
+                <div class="case-card" onclick="window.location.href='case-ca.html'">
+                    <img src="C&A-logo.png" alt="C&A" class="case-image" onerror="this.style.display='none'">
+                    <div class="case-content">
+                        <span class="case-label">International Brand Activation</span>
+                        <h3 class="case-title">C&A – Made for Moves</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Antwerpen · Berlijn · Praag</span>
+                            <span class="case-meta-item">🌍 <strong>3 Europese steden</strong></span>
+                            <span class="case-meta-item">🗓 April 2026</span>
                         </div>
+                        <p class="case-challenge">Lokale crews trainen en een consistente merkervaring neerzetten in drie Europese steden.</p>
+                        <a href="case-ca.html" class="case-link">Lees case →</a>
                     </div>
+                </div>
 
-                    <!-- NAH+ Case -->
-                    <div class="case-card" onclick="window.location.href='case-nah.html'">
-                        <img src="logo-nah.png" alt="NAH+ Event" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">Expertisenetwerk NAH+ - Co-host & programmaflow</h3>
-                            <p class="case-description">
-                                Bij de feestelijke NAH+-bijeenkomst in Utrecht was ik co-host en mede-verantwoordelijk voor
-                                de regie van het programma.
-                            </p>
-                            <a href="case-nah.html" class="case-link">
-                                Lees meer →
-                            </a>
+                <!-- ESN -->
+                <div class="case-card" onclick="window.location.href='case-esn.html'">
+                    <img src="logo-esn.png" alt="ESN" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">On-site Eventmanagement</span>
+                        <h3 class="case-title">ESN – Wereldrecord Sled Push</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Rotterdam Centraal</span>
+                            <span class="case-meta-item">👥 <strong>15 crew</strong></span>
+                            <span class="case-meta-item">⏱ 12-uurs shift</span>
                         </div>
+                        <p class="case-challenge">12 uur lang deelnemersflow, veiligheid en livestream coördineren tijdens een 24-uurs wereldrecordpoging.</p>
+                        <a href="case-esn.html" class="case-link">Lees case →</a>
                     </div>
+                </div>
 
-                    <!-- Verpact Case -->
-                    <div class="case-card" onclick="window.location.href='case-verpact.html'">
-                        <img src="Verpact-logo.png" alt="Verpact Recycle Café" class="case-image" onerror="this.style.display='none'">
-                        <div class="case-content">
-                            <h3 class="case-title">Verpact – Recycle Café (Keizersgracht, Amsterdam)</h3>
-                            <p class="case-description">
-                                Op Koningsdag coördineerde ik de operationele uitvoering van het drijvende Verpact Recycle Café
-                                op de Keizersgracht, waar feestvierders op het water hun verpakkingsafval konden inleveren.
-                            </p>
-                            <a href="case-verpact.html" class="case-link">
-                                Lees meer →
-                            </a>
+                <!-- Verpact -->
+                <div class="case-card" onclick="window.location.href='case-verpact.html'">
+                    <img src="Verpact-logo.png" alt="Verpact" class="case-image" onerror="this.style.display='none'">
+                    <div class="case-content">
+                        <span class="case-label">Brand Activation</span>
+                        <h3 class="case-title">Verpact – Recycle Café</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Keizersgracht, Amsterdam</span>
+                            <span class="case-meta-item">🗓 Koningsdag 2026</span>
                         </div>
+                        <p class="case-challenge">Een drijvende publieksactivatie op Koningsdag veilig en gastvrij laten verlopen op het water.</p>
+                        <a href="case-verpact.html" class="case-link">Lees case →</a>
                     </div>
+                </div>
 
-                    <!-- C&A Case -->
-                    <div class="case-card" onclick="window.location.href='case-ca.html'">
-                        <img src="C&A-logo.png" alt="C&A Made for Moves" class="case-image" onerror="this.style.display='none'">
-                        <div class="case-content">
-                            <h3 class="case-title">C&A – Made for Moves (Antwerpen · Berlijn · Praag)</h3>
-                            <p class="case-description">
-                                Als trainer en operationeel verantwoordelijke begeleidde ik de internationale C&A brand activation
-                                in drie Europese steden, met lokale crews en een Mirror Room-experience voor bezoekers.
-                            </p>
-                            <a href="case-ca.html" class="case-link">
-                                Lees meer →
-                            </a>
+                <!-- Peaky Blinders -->
+                <div class="case-card" onclick="window.location.href='case-peakyblinders.html'">
+                    <img src="logo-netflix.png" alt="Netflix Peaky Blinders" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">City Takeover</span>
+                        <h3 class="case-title">Netflix – Peaky Blinders City Takeover</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Amsterdam</span>
+                            <span class="case-meta-item">👥 <strong>60 performers</strong></span>
+                            <span class="case-meta-item">🗓 21 maart</span>
                         </div>
+                        <p class="case-challenge">60 performers op tijd, veilig en in de juiste uitstraling door Amsterdam bewegen voor media en publiek.</p>
+                        <a href="case-peakyblinders.html" class="case-link">Lees case →</a>
                     </div>
+                </div>
 
-                    <!-- Peaky Blinders Case -->
-                    <div class="case-card" onclick="window.location.href='case-peakyblinders.html'">
-                        <img src="logo-netflix.png" alt="Netflix Peaky Blinders" class="case-image">
-                        <div class="case-content">
-                            <h3 class="case-title">Netflix – Peaky Blinders City Takeover (Amsterdam)</h3>
-                            <p class="case-description">
-                                Tijdens de Netflix Peaky Blinders city takeover in Amsterdam was ik eventmanager op locatie
-                                en verantwoordelijk voor de operationele coördinatie van ~60 performers.
-                            </p>
-                            <a href="case-peakyblinders.html" class="case-link">
-                                Lees meer →
-                            </a>
+                <!-- NAH+ -->
+                <div class="case-card" onclick="window.location.href='case-nah.html'">
+                    <img src="logo-nah.png" alt="NAH+" class="case-image">
+                    <div class="case-content">
+                        <span class="case-label">Co-hosting & Programmaflow</span>
+                        <h3 class="case-title">NAH+ – Co-host & Programmaflow</h3>
+                        <div class="case-meta">
+                            <span class="case-meta-item">📍 Utrecht</span>
+                            <span class="case-meta-item">👥 <strong>±200 genodigden</strong></span>
                         </div>
+                        <p class="case-challenge">Programma, workshops, sprekers en overgangen soepel aan elkaar verbinden als co-host.</p>
+                        <a href="case-nah.html" class="case-link">Lees case →</a>
                     </div>
                 </div>
             </div>
@@ -672,8 +858,13 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p class="footer-text">Beschikbaar voor freelance/interim opdrachten (kort, lang of per project).</p>
-            <p class="footer-text">✨ Neem gerust contact op.</p>
-            <p style="margin-top: 2rem; opacity: 0.7;">© 2026 Ayoub Douider. Alle rechten voorbehouden.</p>
+            <p class="footer-cta-text">Organiseer je een event, activatie of campagne waarbij de uitvoering op locatie strak moet staan?</p>
+            <p class="footer-cta-sub">Ik denk graag mee over crew, flow, timing en operatie.</p>
+            <div class="footer-buttons">
+                <a href="mailto:a.douider@ad-business.nl" class="footer-btn footer-btn-primary">Mail mij</a>
+                <a href="https://www.linkedin.com/in/ayoubdouider" target="_blank" class="footer-btn footer-btn-outline">LinkedIn</a>
+                <a href="#cases" class="footer-btn footer-btn-outline">Bekijk cases</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.5; font-size: 0.9rem;">© 2026 Ayoub Douider. Alle rechten voorbehouden.</p>
         </div>
     </footer>
